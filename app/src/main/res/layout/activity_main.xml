@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avaliação Comportamental"
+        android:textSize="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/colorFonte"/>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:text="Cadastrar"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:padding="10dp"
+            android:text="login"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+
+
+
+
+</LinearLayout>
