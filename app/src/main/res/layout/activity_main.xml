@@ -20,6 +20,8 @@
 
 
         <Button
+            android:id="@+id/btnCadastrar"
+            android:onClick="ShowPopup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button"
@@ -27,16 +29,20 @@
             android:textColor="@color/colorFonte"
             android:textSize="20dp"
             android:padding="10dp"
+            android:layout_margin="10dp"
             />
 
         <Button
+            android:id="@+id/btnLogin"
+            android:onClick=""
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:padding="10dp"
             android:text="login"
             android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_margin="10dp"/>
 
 
 
