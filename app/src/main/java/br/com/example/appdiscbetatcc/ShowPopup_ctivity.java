@@ -33,11 +33,11 @@ public class ShowPopup_ctivity extends AppCompatActivity {
     }
 
     public void setPJuridica(Button PJuridica) {
-        Intent intent = new Intent(ShowPopup_ctivity.this, CadastroJuridico_Activity.class);
+        Intent intent = new Intent(ShowPopup_ctivity.this, CadastroJuridico_Activivity.class);
         startActivity(intent);
 
         }
 
     }
-}
+
 

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastroFisico_Activity"></activity>
+        <activity android:name=".CadastroJuridico_Activivity"></activity>
+        <activity android:name=".CadastroFisico_Activity" />
         <activity android:name=".ShowPopup_ctivity" />
         <activity
             android:name=".MainActivity"

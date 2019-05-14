@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
+    android:theme="@style/TemaSemBarra"
     android:orientation="vertical"
     tools:context=".CadastrarFisica_Activity">
 
@@ -42,7 +43,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CPF::"
+            android:text="CPF:"
             android:textColor="@color/colorFonte"
             android:textSize="20dp" />
 
