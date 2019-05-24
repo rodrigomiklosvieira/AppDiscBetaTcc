@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppDiscBetaTcc</string>
+    <string name="descricao">O teste DISC é composto por 28 quadrantes.
+Escolha apenas uma opção que MAIS se pareça contigo e uma opção que MENOS se adeque ao seu perfil.</string>
 </resources>

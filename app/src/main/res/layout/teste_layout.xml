@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    android:theme="@style/TemaSemBarra"
+    tools:context=".Teste_Activity">
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+            android:background="@drawable/borda"
+            android:src="@drawable/ic_crop_square_dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Entusiástico"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/ic_crop_square_dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+            android:background="@drawable/borda"
+            android:src="@drawable/ic_crop_square_dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Ousado"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+
+            android:background="@drawable/borda"
+            android:src="@drawable/ic_crop_square_dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
