@@ -14,7 +14,7 @@
         android:layout_width="387dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
 
         <TextView
@@ -27,7 +27,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorFonte"/>
+            android:textColorHint="@color/colorFonte"
+            android:backgroundTint="@color/colorFonte"
+            />
 
 
     </LinearLayout>
@@ -50,6 +52,114 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorFonte" />
+            android:textColorHint="@color/colorFonte"
+            android:backgroundTint="@color/colorFonte"/>
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail:"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:backgroundTint="@color/colorFonte"
+        android:textColorHint="@color/colorFonte" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insira uma senha:"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <EditText
+        android:layout_width="386dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/borda"
+        android:drawableRight="@drawable/ic_lock_dp"
+        android:hint=""
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefone:"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/colorFonte"
+            android:backgroundTint="@color/colorFonte"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione a empresa:"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"/>
+
+    <CheckBox
+        android:layout_width="386dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:background="@color/colorFonte"/>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonmenor"
+            android:text="Cancelar"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonmenor"
+            android:text="Enviar"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1
+"
+            />
+
+    </LinearLayout>
+
+
 </LinearLayout>
