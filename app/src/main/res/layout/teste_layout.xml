@@ -14,21 +14,57 @@
         android:layout_width="387dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="1"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal">
 
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="50dp"
-
             android:background="@drawable/borda"
-            android:src="@drawable/ic_crop_square_dp" />
+            android:src="@drawable/checkbox_blank" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:paddingLeft="20dp"
             android:text="Entusiástico"
             android:textColor="@color/colorFonte"
             android:textSize="20dp" />
@@ -37,7 +73,7 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
-            android:src="@drawable/ic_crop_square_dp" />
+            android:src="@drawable/checkbox_blank" />
 
     </LinearLayout>
 
@@ -51,15 +87,15 @@
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="50dp"
-
             android:background="@drawable/borda"
-            android:src="@drawable/ic_crop_square_dp" />
+            android:src="@drawable/alpha_z" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
+            android:paddingLeft="20dp"
             android:text="Ousado"
             android:textColor="@color/colorFonte"
             android:textSize="20dp" />
@@ -67,11 +103,1034 @@
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="50dp"
-
             android:background="@drawable/borda"
-            android:src="@drawable/ic_crop_square_dp" />
+            android:src="@drawable/alpha_z" />
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Perfeccionista"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Satisfeito"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="2"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Cauteloso"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Determinado"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Convincente"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Boa Pessoa"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="3"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Amigo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Exato"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Sincero"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Calmo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="4"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Falador"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Controlado"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Convencional"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Decisivo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="5"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Aventureiro"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Observador"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Aberto"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Moderado"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="70dp"
+            android:text="6"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Gentil"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Persuasivo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Modesto"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:text="Criativo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Mais"
+            android:textSize="20dp"
+            android:textColor="@color/colorFonte"/>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="7"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:paddingLeft="70dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="Menos"
+            android:textSize="20dp"
+            android:textColor="@color/colorFonte"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Expressivo"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/checkbox_blank" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Consciencioso"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/music"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Dominante"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_z"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/alpha_n"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Disposto"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:paddingLeft="20dp"/>
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/borda"
+            android:src="@drawable/triangle"
+            />
+
+    </LinearLayout>
 
 </LinearLayout>
