@@ -37,6 +37,8 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancelar"
+            android:onClick="Cancelar"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
@@ -48,6 +50,8 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/btnIniciar"
+            android:onClick="Iniciar"
             android:layout_width="160dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"

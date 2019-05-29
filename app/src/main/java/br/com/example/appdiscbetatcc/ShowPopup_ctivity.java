@@ -38,6 +38,15 @@ public class ShowPopup_ctivity extends AppCompatActivity {
 
         }
 
+    public void PFisica(View view) {
+        Intent intent = new Intent(ShowPopup_ctivity.this, CadastroFisico_Activity.class);
+        startActivity(intent);
     }
+
+    public void PJuridica(View view) {
+        Intent intent = new Intent(ShowPopup_ctivity.this, CadastroJuridico_Activivity.class);
+        startActivity(intent);
+    }
+}
 
 

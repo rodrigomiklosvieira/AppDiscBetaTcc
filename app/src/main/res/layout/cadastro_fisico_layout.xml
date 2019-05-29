@@ -164,11 +164,11 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/btnEnviar"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:layout_weight="1
-"
+            android:layout_weight="1"
             android:background="@drawable/buttonmenor"
             android:padding="10dp"
             android:text="Enviar"
