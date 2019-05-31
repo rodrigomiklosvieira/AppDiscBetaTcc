@@ -18,17 +18,17 @@
         android:orientation="vertical">
 
         <TextView
-            android:layout_width="wrap_content"
+                        android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome Completo:"
             android:textColor="@color/colorFonte"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtNomeFisico"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
 
 
     </LinearLayout>
@@ -49,10 +49,10 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtCpfFisico"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
     </LinearLayout>
 
     <TextView
@@ -65,10 +65,11 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtEmailFisico"
         android:layout_width="386dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginLeft="15dp"
-        android:backgroundTint="@color/colorFonte"
+        android:background="@drawable/borda"
         android:textColorHint="@color/colorFonte" />
 
     <TextView
@@ -81,8 +82,9 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtSenha"
         android:layout_width="386dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="15dp"
         android:background="@drawable/borda"
         android:drawableRight="@drawable/ic_lock_dp"
@@ -100,12 +102,12 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtSenhaConfirme"
         android:layout_width="386dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="15dp"
         android:background="@drawable/borda"
         android:drawableRight="@drawable/ic_lock_dp"
-        android:hint=""
         android:inputType="textPassword"
         android:padding="10dp" />
 
@@ -124,10 +126,10 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtTel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
     </LinearLayout>
 
     <TextView
@@ -135,11 +137,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
         android:text="Selecione a empresa:"
         android:textColor="@color/colorFonte"
         android:textSize="20dp" />
 
     <CheckBox
+        android:id="@+id/chbEmpresa"
         android:layout_width="386dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -153,6 +157,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancelarFisico"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"

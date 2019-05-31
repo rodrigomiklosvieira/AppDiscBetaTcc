@@ -19,11 +19,11 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtLogin"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/colorFonte"
-        android:textColorHint="@color/colorFonte" />
+        android:background="@drawable/borda" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,6 +36,7 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtSenhaLogin"
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
@@ -53,6 +54,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancelarLog"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
@@ -64,6 +66,7 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/btnEntrar"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"

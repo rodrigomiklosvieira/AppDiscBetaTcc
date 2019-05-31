@@ -25,10 +25,10 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtRazaoSocial"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
 
 
     </LinearLayout>
@@ -49,10 +49,10 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtCnpj"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
     </LinearLayout>
 
     <TextView
@@ -65,11 +65,11 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/EmailJurid"
         android:layout_width="386dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginLeft="15dp"
-        android:backgroundTint="@color/colorFonte"
-        android:textColorHint="@color/colorFonte" />
+        android:background="@drawable/borda" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -124,10 +124,10 @@
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/txtTel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorFonte"
-            android:textColorHint="@color/colorFonte" />
+            android:layout_height="40dp"
+            android:background="@drawable/borda" />
     </LinearLayout>
 
 
@@ -139,6 +139,7 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancelarJurid"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -150,11 +151,11 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/btnEnviar"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:layout_weight="1
-"
+            android:layout_weight="1"
             android:background="@drawable/buttonmenor"
             android:padding="10dp"
             android:text="Enviar"

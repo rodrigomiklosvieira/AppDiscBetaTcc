@@ -4,48 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@color/colorBackground">
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Avaliação Comportamental"
-        android:textSize="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:textColor="@color/colorFonte"/>
+        android:text="Avaliação Comportamental"
+        android:textColor="@color/colorFonte"
+        android:textSize="30dp" />
 
 
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:onClick="ShowPopup"
+        android:padding="10dp"
+        android:text="Cadastrar"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/btnCadastrar"
-            android:onClick="ShowPopup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:text="Cadastrar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp"
-            android:padding="10dp"
-            android:layout_margin="10dp"
-            />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:onClick="Login"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp" />
 
-        <Button
-            android:id="@+id/btnLogin"
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:padding="10dp"
-            android:text="login"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp"
-            android:layout_margin="10dp"/>
-
-
-
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/button"
+        android:onClick="Sair"
+        android:padding="10dp"
+        android:text="Sair"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp" />
 
 
 </LinearLayout>
