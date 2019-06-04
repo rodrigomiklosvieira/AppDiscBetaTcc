@@ -65,7 +65,7 @@
         android:textSize="20dp" />
 
     <EditText
-        android:id="@+id/EmailJurid"
+        android:id="@+id/txtEmailJurid"
         android:layout_width="386dp"
         android:layout_height="40dp"
         android:layout_marginLeft="15dp"
@@ -81,6 +81,7 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtSenhaJ"
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
@@ -100,12 +101,12 @@
         android:textSize="20dp" />
 
     <EditText
+        android:id="@+id/txtSenhaJConfirme"
         android:layout_width="386dp"
         android:layout_height="50dp"
         android:layout_marginLeft="15dp"
         android:background="@drawable/borda"
         android:drawableRight="@drawable/ic_lock_dp"
-        android:hint=""
         android:inputType="textPassword"
         android:padding="10dp" />
 

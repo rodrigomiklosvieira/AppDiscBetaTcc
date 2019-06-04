@@ -30,6 +30,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Sair(View view) {
-
+        finish();
     }
 }

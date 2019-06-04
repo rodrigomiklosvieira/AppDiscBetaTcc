@@ -42,15 +42,24 @@
         android:layout_marginLeft="15dp"
         android:background="@drawable/borda"
         android:drawableRight="@drawable/ic_lock_dp"
-        android:hint=""
         android:inputType="textPassword"
         android:padding="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="Esqueceu sua senha?"
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="387dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="180dp"
         android:orientation="horizontal">
 
         <Button
