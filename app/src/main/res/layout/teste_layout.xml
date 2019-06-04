@@ -1701,6 +1701,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1716,6 +1718,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1732,6 +1736,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1747,6 +1753,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnNmais"
+            android:onClick="nMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1763,6 +1771,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1814,6 +1824,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1830,6 +1842,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1845,6 +1859,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1861,6 +1877,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1876,6 +1894,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1892,6 +1912,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1907,6 +1929,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1923,6 +1947,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1974,6 +2000,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -1990,6 +2018,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2005,6 +2035,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2021,6 +2053,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2036,6 +2070,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2052,6 +2088,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2067,6 +2105,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2083,6 +2123,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2134,6 +2176,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2150,6 +2194,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2165,6 +2211,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2181,6 +2229,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2196,6 +2246,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2212,6 +2264,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2227,6 +2281,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2243,6 +2299,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2294,6 +2352,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2310,6 +2370,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2325,6 +2387,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2341,6 +2405,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2356,6 +2422,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2372,6 +2440,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2387,6 +2457,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2403,6 +2475,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2454,6 +2528,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2470,6 +2546,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2485,6 +2563,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2501,6 +2581,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2516,6 +2598,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2532,6 +2616,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2547,6 +2633,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2563,6 +2651,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2614,6 +2704,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2630,6 +2722,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2645,6 +2739,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2661,6 +2757,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2676,6 +2774,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2692,6 +2792,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2707,6 +2809,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2723,6 +2827,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2774,6 +2880,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2790,6 +2898,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2805,6 +2915,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2821,6 +2933,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2836,6 +2950,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2852,6 +2968,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2867,6 +2985,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2883,6 +3003,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2934,6 +3056,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2950,6 +3074,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2965,6 +3091,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2981,6 +3109,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnNmenos"
+            android:onClick="nMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -2996,6 +3126,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3012,6 +3144,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3027,6 +3161,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3043,6 +3179,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3094,6 +3232,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3110,6 +3250,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3125,6 +3267,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3141,6 +3285,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3156,6 +3302,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3172,6 +3320,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3187,6 +3337,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnNmais"
+            android:onClick="nMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3203,6 +3355,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3254,6 +3408,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3270,6 +3426,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3285,6 +3443,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3301,6 +3461,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3316,6 +3478,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnNmais"
+            android:onClick="nMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3332,6 +3496,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3347,6 +3513,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3363,6 +3531,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3414,6 +3584,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3430,6 +3602,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3445,6 +3619,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3461,6 +3637,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3476,6 +3654,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3492,6 +3672,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3507,6 +3689,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3523,6 +3707,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3574,6 +3760,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3590,6 +3778,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3605,6 +3795,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3621,6 +3813,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3636,6 +3830,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3652,6 +3848,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3667,6 +3865,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3683,6 +3883,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3734,6 +3936,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3750,6 +3954,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3765,6 +3971,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3781,6 +3989,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3796,6 +4006,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3812,6 +4024,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3827,6 +4041,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3843,6 +4059,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3894,6 +4112,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3910,6 +4130,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3925,6 +4147,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3941,6 +4165,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3956,6 +4182,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3972,6 +4200,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -3987,6 +4217,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4003,6 +4235,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4054,6 +4288,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4070,6 +4306,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4085,6 +4323,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4101,6 +4341,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4116,6 +4358,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4132,6 +4376,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4147,6 +4393,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4163,6 +4411,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4214,6 +4464,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4230,6 +4482,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4245,6 +4499,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4261,6 +4517,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4276,6 +4534,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4292,6 +4552,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4307,6 +4569,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4323,6 +4587,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4374,6 +4640,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4390,6 +4658,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4405,6 +4675,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4421,6 +4693,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4436,6 +4710,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4452,6 +4728,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4467,6 +4745,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4483,6 +4763,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4534,6 +4816,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnMusicMais"
+            android:onClick="musicMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4550,6 +4834,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnMusicMenos"
+            android:onClick="musicMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4565,6 +4851,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnZmais"
+            android:onClick="zMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4581,6 +4869,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnZmenos"
+            android:onClick="zMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4596,6 +4886,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMais"
+            android:onClick="checkboxMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4612,6 +4904,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnCheckBoxMenos"
+            android:onClick="checkboxMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4627,6 +4921,8 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnTriangleMais"
+            android:onClick="triangleMais"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4643,6 +4939,8 @@
             android:textSize="20dp" />
 
         <ImageButton
+            android:id="@+id/btnTriangleMenos"
+            android:onClick="triangleMenos"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:background="@drawable/borda"
@@ -4658,6 +4956,8 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnCancelar"
+            android:onClick="Cancelar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="10dp"
@@ -4669,6 +4969,8 @@
             android:textSize="20dp" />
 
         <Button
+            android:id="@+id/btnEnviarTeste"
+            android:onClick="enviarTeste"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_margin="10dp"
