@@ -9,6 +9,8 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button sairSistema;
+    Button Cadastrar;
+    Button Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         sairSistema = (Button)findViewById(R.id.btnSair);
+        Cadastrar = (Button)findViewById(R.id.btnCadastrar);
+        Login = (Button)findViewById(R.id.btnLogin);
     }
 
     public void ShowPopup(View view) {

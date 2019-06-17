@@ -26,5 +26,7 @@ public class Descricao_Activity extends AppCompatActivity {
     }
 
     public void Cancelar(View view) {
+        Intent intent = new Intent(Descricao_Activity.this, MainActivity.class);
+        startActivity(intent);
     }
 }

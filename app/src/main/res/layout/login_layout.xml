@@ -64,6 +64,7 @@
 
         <Button
             android:id="@+id/btnCancelarLog"
+            android:onClick="CancelarLog"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"
@@ -76,6 +77,7 @@
 
         <Button
             android:id="@+id/btnEntrar"
+            android:onClick="Entrar"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_margin="10dp"

@@ -141,6 +141,7 @@
 
         <Button
             android:id="@+id/btnCancelarJurid"
+            android:onClick="CancelarJur"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
@@ -153,6 +154,7 @@
 
         <Button
             android:id="@+id/btnEnviar"
+            android:onClick="EnviarJur"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_margin="10dp"
