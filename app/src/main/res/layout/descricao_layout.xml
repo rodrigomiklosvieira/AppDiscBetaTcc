@@ -9,7 +9,7 @@
     android:theme="@style/TemaSemBarra"
     tools:context=".Descricao_Activity">
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
