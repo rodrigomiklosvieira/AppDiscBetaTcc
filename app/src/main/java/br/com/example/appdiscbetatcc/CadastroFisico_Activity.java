@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
 import static android.R.layout.simple_spinner_item;
 
 public class CadastroFisico_Activity extends AppCompatActivity {
@@ -51,8 +53,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     private ArrayList<String> names = new ArrayList<String>();
     private ArrayList<Integer> ida = new ArrayList<Integer>();
     private static ProgressDialog mProgressDialog;
-    int id;
-
+    int id2;
 
 
     @Override
@@ -62,8 +63,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        CancelarCF = (Button)findViewById(R.id.btnCancelarFisico);
-        EnviarCF = (Button)findViewById(R.id.btnEnviar);
+        CancelarCF = (Button) findViewById(R.id.btnCancelarFisico);
+        EnviarCF = (Button) findViewById(R.id.btnEnviar);
 
         txtNomeFisico = findViewById(R.id.txtNomeFisico);
         txtCpfFisico = findViewById(R.id.txtCpfFisico);
@@ -71,26 +72,12 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         txtSenha = findViewById(R.id.txtSenha);
         txtSenhaConfirme = findViewById(R.id.txtSenhaConfirme);
         txtTel = findViewById(R.id.txtTel);
-        chbEmpresa =(Spinner)findViewById(R.id.chbEmpresa);
+        chbEmpresa = (Spinner) findViewById(R.id.chbEmpresa);
+
 
         selecionaEmpresa();
 
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     public void CancelarCF(View view) {
@@ -103,32 +90,32 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
         boolean validado = true;
 
-        if(txtNomeFisico.getText().length()==0){
-            txtNomeFisico.setError("Campo email Obrigatório");
+        if (txtNomeFisico.getText().length() == 0) {
+            txtNomeFisico.setError("Campo nome Obrigatório");
             txtNomeFisico.requestFocus();
             validado = false;
         }
 
-        if(txtCpfFisico.getText().length()==0){
-            txtCpfFisico.setError("Campo email Obrigatório");
+        if (txtCpfFisico.getText().length() == 0) {
+            txtCpfFisico.setError("Campo cpf Obrigatório");
             txtCpfFisico.requestFocus();
             validado = false;
         }
 
-        if(txtEmailFisico.getText().length()==0){
+        if (txtEmailFisico.getText().length() == 0) {
             txtEmailFisico.setError("Campo email Obrigatório");
             txtEmailFisico.requestFocus();
             validado = false;
         }
 
-        if(txtSenha.getText().length()==0){
-            txtSenha.setError("Campo email Obrigatório");
+        if (txtSenha.getText().length() == 0) {
+            txtSenha.setError("Campo senha Obrigatório");
             txtSenha.requestFocus();
             validado = false;
         }
 
-        if(txtSenhaConfirme.getText().length()==0){
-            txtSenhaConfirme.setError("Campo email Obrigatório");
+        if (txtSenhaConfirme.getText().length() == 0) {
+            txtSenhaConfirme.setError("Campo de confirmação Obrigatório");
             txtSenhaConfirme.requestFocus();
             validado = false;
         }
@@ -136,24 +123,23 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         String senha = txtSenha.getText().toString();
         String confirma = txtSenhaConfirme.getText().toString();
 
-        if(senha != confirma){
-          txtSenhaConfirme.setError("As senhas não se coincidem");
-          txtSenhaConfirme.requestFocus();
-           validado = false;
+        if (!senha.equals(confirma)) {
+            txtSenhaConfirme.setError("As senhas não se coincidem");
+            txtSenhaConfirme.requestFocus();
+            validado = false;
 
-       }
+        }
 
-        if(txtTel.getText().length()==0){
+        if (txtTel.getText().length() == 0) {
             txtTel.setError("Campo email Obrigatório");
             txtTel.requestFocus();
             validado = false;
         }
 
 
+        if (validado) {
 
-        if(validado){
-
-            Toast.makeText(getApplicationContext(),"Validando seus dados...espere...",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Cadastrando...aguarde...", Toast.LENGTH_SHORT).show();
 
             validarCadastro();
 
@@ -162,8 +148,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
     }
 
-    private void validarCadastro(){
-
+    private void validarCadastro() {
 
         stringRequest = new StringRequest(Request.Method.POST, urlwebservices,
                 new Response.Listener<String>() {
@@ -171,22 +156,22 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                     public void onResponse(String response) {
                         Log.v("LogCadastro", response);
 
-                        try{
+                        try {
                             JSONObject jsonObject = new JSONObject(response);
                             boolean isErro = jsonObject.getBoolean("erro");
 
-                            if(isErro){
+                            if (isErro) {
 
-                                Toast.makeText(getApplicationContext(),jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
-                            }else{
+                                Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
+                            } else {
 
-                                    Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
-                                    startActivity(intent);
-                                    finish();
+                                Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
+                                startActivity(intent);
+                                finish();
 
                             }
 
-                        }catch (Exception e){
+                        } catch (Exception e) {
 
                             Log.v("LogCadastro", e.getMessage());
                         }
@@ -196,10 +181,10 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e("Loglogin",error.getMessage());
+                        Log.e("Loglogin", error.getMessage());
                     }
-                }){
-            protected Map<String, String> getParams(){
+                }) {
+            protected Map<String, String> getParams() {
 
                 Map<String, String> params = new HashMap<>();
                 params.put("nome", txtNomeFisico.getText().toString());
@@ -207,10 +192,10 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 params.put("cpf", txtCpfFisico.getText().toString());
                 params.put("senha", txtSenha.getText().toString());
                 params.put("telefone", txtTel.getText().toString());
-                int id = ((spinner)chbEmpresa.getSelectedItem()).id;
-               // params.put("empresa", Integer.toString(id));
+                //int id = ((spinner)chbEmpresa.getSelectedItem()).id;
+                params.put("empresa", Integer.toString(id2));
 
-                params.put("empresa", "19");
+                //params.put("empresa", "19");
 
                 return params;
             }
@@ -219,15 +204,13 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         };
 
 
-
         requestQueue.add(stringRequest);
 
 
     }
 
 
-
-    private void selecionaEmpresa(){
+    private void selecionaEmpresa() {
 
         stringRequest = new StringRequest(Request.Method.GET, urlwebservices2,
                 new Response.Listener<String>() {
@@ -235,14 +218,14 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                     public void onResponse(String response) {
                         Log.d("strrrrr", ">>" + response);
 
-                        try{
+                        try {
                             JSONObject jsonObject = new JSONObject(response);
 
 
-                            if(jsonObject.optString("status").equals("true")){
+                            if (jsonObject.optString("status").equals("true")) {
 
                                 goodModelArrayList = new ArrayList<>();
-                                JSONArray dataArray  = jsonObject.getJSONArray("data");
+                                JSONArray dataArray = jsonObject.getJSONArray("data");
 
                                 for (int i = 0; i < dataArray.length(); i++) {
 
@@ -257,7 +240,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
                                 }
 
-                                for (int i = 0; i < goodModelArrayList.size(); i++){
+                                for (int i = 0; i < goodModelArrayList.size(); i++) {
 
 
                                     names.add(goodModelArrayList.get(i).getNome());
@@ -270,14 +253,25 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 chbEmpresa.setAdapter(spinnerArrayAdapter);
 
 
+                                chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                                    @Override
+                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                                        id2 = ida.get(position);
+                                        // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
+                                        //  Toast.makeText(CadastroFisico_Activity.this,"ID: " + id2, Toast.LENGTH_LONG).show();
+                                    }
+
+                                    @Override
+                                    public void onNothingSelected(AdapterView<?> parent) {
+
+                                    }
+                                });
 
 
                             }
 
 
-
-
-                        }catch (JSONException e){
+                        } catch (JSONException e) {
 
                             e.printStackTrace();
                         }
@@ -292,8 +286,6 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 });
 
         requestQueue.add(stringRequest);
-
-
 
 
     }
