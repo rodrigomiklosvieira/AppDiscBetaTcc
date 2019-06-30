@@ -256,6 +256,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
                                         id2 = ida.get(position);
                                         // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
                                         //  Toast.makeText(CadastroFisico_Activity.this,"ID: " + id2, Toast.LENGTH_LONG).show();
