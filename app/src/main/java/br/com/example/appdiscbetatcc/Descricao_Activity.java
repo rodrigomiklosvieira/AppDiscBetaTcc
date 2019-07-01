@@ -21,7 +21,7 @@ public class Descricao_Activity extends AppCompatActivity {
     }
 
     public void Iniciar(View view) {
-        Intent intent = new Intent(Descricao_Activity.this, Teste_Activity.class);
+        Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
         startActivity(intent);
     }
 
