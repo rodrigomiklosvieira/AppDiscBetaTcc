@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TemaSemBarra">
-        <activity android:name=".cautela_Activity"></activity>
+        <activity android:name=".cautela_Activity" />
         <activity android:name=".estabilidade_Activity" />
         <activity android:name=".influencia_Activity" />
         <activity android:name=".dominancia_Activity" />

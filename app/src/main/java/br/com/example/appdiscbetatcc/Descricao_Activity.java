@@ -40,6 +40,7 @@ public class Descricao_Activity extends AppCompatActivity {
 
     String urlwebservices = "https://carlos.cf/apiRest/alterarempresa.php";
     String urlwebservices2 = "https://carlos.cf/apiRest/selecionaempresa.php";
+    String urlwebservices3 = "https://carlos.cf/apiRest/verificateste.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
@@ -90,9 +91,7 @@ public class Descricao_Activity extends AppCompatActivity {
     }
 
     public void Iniciar(View view) {
-        Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
-        startActivity(intent);
-        finish();
+       verificaTeste();
     }
 
     public void Cancelar(View view) {
@@ -168,6 +167,62 @@ public class Descricao_Activity extends AppCompatActivity {
     }
 
 
+    private void verificaTeste() {
+
+        stringRequest = new StringRequest(Request.Method.POST, urlwebservices3,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Log.v("LogCadastro", response);
+
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean isErro = jsonObject.getBoolean("erro");
+
+                            if (isErro) {
+
+                                Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
+                                startActivity(intent);
+
+
+
+                            } else {
+
+                                Toast.makeText(getApplicationContext(), "ERRO! Você já fez o TESTE para RH/Psicologo(a) selecionado!", Toast.LENGTH_LONG).show();
+                            }
+
+                        } catch (Exception e) {
+
+                            Log.v("LogCadastro", e.getMessage());
+                        }
+
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e("Loglogin", error.getMessage());
+                    }
+                }) {
+            protected Map<String, String> getParams() {
+
+                Map<String, String> params = new HashMap<>();
+
+
+                params.put("email", email);
+
+
+                return params;
+            }
+
+
+        };
+
+
+        requestQueue.add(stringRequest);
+
+
+    }
 
 
     private void selecionaEmpresa() {
