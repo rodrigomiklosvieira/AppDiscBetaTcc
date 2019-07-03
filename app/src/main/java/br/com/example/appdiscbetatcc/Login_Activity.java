@@ -103,8 +103,10 @@ public class Login_Activity extends AppCompatActivity {
                                 if(nivel==1){
 
                                     nome = (jsonObject.getString("nome"));
+                                    String nomeempresa = (jsonObject.getString("nomeempresa"));
                                     Intent intent = new Intent(Login_Activity.this, Descricao_Activity.class);
                                     intent.putExtra("nome", nome);
+                                    intent.putExtra("nomeempresa", nomeempresa);
                                     startActivity(intent);
                                     finish();
 

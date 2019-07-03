@@ -19,14 +19,17 @@ public class Descricao_Activity extends AppCompatActivity {
 
 
         TextView nome = (TextView)findViewById(R.id.nome);
+        TextView nomeempresa = (TextView)findViewById(R.id.recebeEmpresa);
 
 
         Intent intent = getIntent();
         String usuario = intent.getStringExtra("nome");
+        String nomeemp = intent.getStringExtra("nomeempresa");
 
 
 
         nome.setText("Bem-Vindo, " + usuario + ".");
+        nomeempresa.setText("O TESTE será enviado para: " + nomeemp + ".");
 
         Iniciar = (Button)findViewById(R.id.btnIniciar);
         Cancelar = (Button)findViewById(R.id.btnCancelar);

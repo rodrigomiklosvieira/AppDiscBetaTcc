@@ -54,6 +54,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     private ArrayList<Integer> ida = new ArrayList<Integer>();
     private static ProgressDialog mProgressDialog;
     int id2;
+    String nomeempresa;
 
 
     @Override
@@ -167,6 +168,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                String nome = txtNomeFisico.getText().toString();
                                 Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
                                 intent.putExtra("nome", nome);
+                                intent.putExtra("nomeempresa", nomeempresa);
                                 startActivity(intent);
                                 finish();
 
@@ -257,7 +259,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
+                                        nomeempresa =names.get(position);
                                         id2 = ida.get(position);
                                         // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
                                         //  Toast.makeText(CadastroFisico_Activity.this,"ID: " + id2, Toast.LENGTH_LONG).show();
