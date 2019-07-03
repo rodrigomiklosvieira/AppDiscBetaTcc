@@ -9,15 +9,36 @@
     android:theme="@style/TemaSemBarra"
     tools:context=".Descricao_Activity">
 
+
+    <Button
+
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+       android:layout_gravity="right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/sair"
+        android:shadowColor="#383838"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:onClick="Cancelar"
+        android:id="@+id/btnCancelar"
+        />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:layout_marginBottom="40dp"
         android:text="Descrição do Teste"
         android:textAlignment="center"
         android:textColor="@color/colorFonte"
-        android:textSize="40dp" />
+        android:textSize="40dp"
+        android:id="@+id/nome"
+
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,18 +57,7 @@
         android:layout_marginTop="60dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnCancelar"
-            android:onClick="Cancelar"
-            android:layout_width="160dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:padding="10dp"
-            android:text="Cancelar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+
 
         <Button
             android:id="@+id/btnIniciar"

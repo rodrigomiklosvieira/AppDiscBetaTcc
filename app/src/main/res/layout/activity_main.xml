@@ -54,6 +54,7 @@
         android:shadowDy="6"
         android:shadowRadius="7"
         android:layout_marginRight="10dp"
+        android:onClick="dinamica"
         />
 
     <Button
@@ -70,6 +71,7 @@
         android:shadowDx="-4"
         android:shadowDy="6"
         android:shadowRadius="7"
+        android:onClick="influencia"
         />
 </LinearLayout>
 
@@ -95,6 +97,7 @@
             android:shadowDy="6"
             android:shadowRadius="7"
             android:layout_marginRight="10dp"
+            android:onClick="cautela"
             />
 
         <Button
@@ -111,6 +114,7 @@
             android:shadowDx="-4"
             android:shadowDy="6"
             android:shadowRadius="7"
+            android:onClick="estabilidade"
             />
 
 

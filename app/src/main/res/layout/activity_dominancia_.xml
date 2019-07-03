@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dominancia_Activity"
+    android:orientation="vertical"
+    android:background="#F00202"
+
+    >
+
+    <Button
+
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:layout_gravity="right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/sair"
+        android:shadowColor="#383838"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:onClick="Cancelar"
+        android:id="@+id/btnCancelar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Dominância"
+        android:textColor="#ffff"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:text="Frase: “Eu sei o que eu quero”
+São pessoas que possuem mais facilidade em lidar com desafios, pois são determinadas, exigentes, ousadas e assertivas. Por outro lado, essas pessoas não são muito atenciosas com os sentimentos e necessidades dos outros, podendo se tornar egoístas."
+        android:textColor="#ffff"
+        android:textSize="25dp" />
+</LinearLayout>

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class Descricao_Activity extends AppCompatActivity {
 
@@ -16,6 +17,17 @@ public class Descricao_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.descricao_layout);
 
+
+        TextView nome = (TextView)findViewById(R.id.nome);
+
+
+        Intent intent = getIntent();
+        String usuario = intent.getStringExtra("nome");
+
+
+
+        nome.setText("Bem-Vindo, " + usuario + ".");
+
         Iniciar = (Button)findViewById(R.id.btnIniciar);
         Cancelar = (Button)findViewById(R.id.btnCancelar);
     }
@@ -23,10 +35,12 @@ public class Descricao_Activity extends AppCompatActivity {
     public void Iniciar(View view) {
         Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void Cancelar(View view) {
         Intent intent = new Intent(Descricao_Activity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 }

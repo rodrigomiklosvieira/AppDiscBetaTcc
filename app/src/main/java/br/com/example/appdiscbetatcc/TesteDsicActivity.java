@@ -69,7 +69,7 @@ public class TesteDsicActivity extends AppCompatActivity {
         if(rgMais.getCheckedRadioButtonId() == quadradoMais) {
 
             quadradoMaisPontos++;
-            Toast.makeText(getApplicationContext(),"quadradoMais" + quadradoMaisPontos,Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"quadradoMais: " + quadradoMaisPontos,Toast.LENGTH_SHORT).show();
         }else if(rgMais.getCheckedRadioButtonId() == zMais){
             zMaisPontos++;
         }else if(rgMais.getCheckedRadioButtonId() == musicaMais){
@@ -282,5 +282,11 @@ public class TesteDsicActivity extends AppCompatActivity {
     protected void onRestart(){
         super.onRestart();
         carregarQuestao();
+    }
+
+    public void Cancelar(View view) {
+        Intent intent = new Intent(TesteDsicActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

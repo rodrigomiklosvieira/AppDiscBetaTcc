@@ -32,6 +32,7 @@ public class Login_Activity extends AppCompatActivity {
     Button CancelarLog;
     EditText txtLogin;
     EditText textPassword;
+    String nome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +51,7 @@ public class Login_Activity extends AppCompatActivity {
 
         Intent intent = new Intent(Login_Activity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void Entrar(View view) {
@@ -99,7 +101,10 @@ public class Login_Activity extends AppCompatActivity {
 
                                 int nivel = jsonObject.getInt("perfil");
                                 if(nivel==1){
+
+                                    nome = (jsonObject.getString("nome"));
                                     Intent intent = new Intent(Login_Activity.this, Descricao_Activity.class);
+                                    intent.putExtra("nome", nome);
                                     startActivity(intent);
                                     finish();
 
@@ -129,6 +134,7 @@ public class Login_Activity extends AppCompatActivity {
                Map<String, String> params = new HashMap<>();
                params.put("login", txtLogin.getText().toString());
                params.put("senha", textPassword.getText().toString());
+
                return params;
            }
 

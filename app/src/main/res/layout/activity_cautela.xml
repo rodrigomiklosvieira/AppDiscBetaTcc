@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cautela_Activity"
+    android:orientation="vertical"
+    android:background="#D4C81E"
+    >
+
+    <Button
+
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:layout_gravity="right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/sair"
+        android:shadowColor="#383838"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:onClick="Cancelar"
+        android:id="@+id/btnCancelar"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Cautela"
+        android:textColor="#ffff"
+        android:textSize="30dp"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_margin="10dp"
+        android:text="Frase: “Eu gosto de fazer as coisas do jeito certo”
+São pessoas que possuem uma maior facilidade em lidar com regras e processos. São metódicas, analíticas, técnicas e determinadas. Elas seguem ordens e normas, e realizam suas tarefas com um cuidado exemplar. Por serem muito perfeccionistas, tendem a se perder em detalhes e são extremamente críticas — tanto com elas mesmas, quanto com as outras pessoas."
+        android:textColor="#ffff"
+        android:textSize="25dp" />
+
+</LinearLayout>

@@ -25,15 +25,39 @@ public class MainActivity extends AppCompatActivity {
     public void ShowPopup(View view) {
         Intent intent = new Intent(MainActivity.this, ShowPopup_ctivity.class);
         startActivity(intent);
+        finish();
 
     }
 
     public void Login(View view) {
         Intent intent = new Intent(MainActivity.this, Login_Activity.class);
         startActivity(intent);
+        finish();
     }
 
     public void Sair(View view) {
         finish();
+    }
+
+    public void dinamica(View view) {
+        Intent intent = new Intent(MainActivity.this, dominancia_Activity.class);
+        startActivity(intent);
+
+    }
+
+    public void influencia(View view) {
+        Intent intent = new Intent(MainActivity.this, influencia_Activity.class);
+        startActivity(intent);
+
+    }
+
+    public void estabilidade(View view) {
+        Intent intent = new Intent(MainActivity.this, estabilidade_Activity.class);
+        startActivity(intent);
+    }
+
+    public void cautela(View view) {
+        Intent intent = new Intent(MainActivity.this, cautela_Activity.class);
+        startActivity(intent);
     }
 }

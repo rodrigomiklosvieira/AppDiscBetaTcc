@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TemaSemBarra">
-        <activity android:name=".FinalizaTeste"></activity>
+        <activity android:name=".cautela_Activity"></activity>
+        <activity android:name=".estabilidade_Activity" />
+        <activity android:name=".influencia_Activity" />
+        <activity android:name=".dominancia_Activity" />
+        <activity android:name=".FinalizaTeste" />
         <activity android:name=".TesteDsicActivity" />
         <activity android:name=".PainelRHActivity" />
         <activity android:name=".Teste_Activity" />
