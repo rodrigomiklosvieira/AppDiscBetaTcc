@@ -166,9 +166,12 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
                                String nome = txtNomeFisico.getText().toString();
+
+                               String email = txtEmailFisico.getText().toString();
                                 Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
                                 intent.putExtra("nome", nome);
                                 intent.putExtra("nomeempresa", nomeempresa);
+                                intent.putExtra("login", email);
                                 startActivity(intent);
                                 finish();
 

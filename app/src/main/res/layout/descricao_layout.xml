@@ -30,7 +30,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="40dp"
         android:text="Descrição do Teste"
         android:textAlignment="center"
@@ -61,6 +61,73 @@
         android:textSize="20dp"
         android:id="@+id/recebeEmpresa"
         />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/sim"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deseja Alterar?"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+
+            />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/buttonmenor"
+            android:text="SIM"
+            android:textColor="@color/colorFonte"
+            android:onClick="abreSelecao"
+            />
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:id="@+id/linearSelect"
+        >
+
+        <Spinner
+            android:id="@+id/selecionaEmpresa"
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+
+            android:background="@drawable/spinner"
+            android:spinnerMode="dropdown" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/buttonmenor"
+            android:text="Alterar"
+            android:textColor="@color/colorFonte"
+            android:onClick="alterar"
+
+            />
+
+
+
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="387dp"
