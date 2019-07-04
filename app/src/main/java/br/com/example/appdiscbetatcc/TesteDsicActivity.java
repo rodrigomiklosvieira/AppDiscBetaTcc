@@ -37,6 +37,7 @@ public class TesteDsicActivity extends AppCompatActivity {
     int trianguloMenosPontos;
     RadioGroup rgMais;
     RadioGroup rgMenos;
+    int d,i,s,c;
 
 
 
@@ -269,8 +270,19 @@ public class TesteDsicActivity extends AppCompatActivity {
 
         }
         else{ //acabaram as questões
+
+            d = zMaisPontos - zMenosPontos;
+            i = quadradoMaisPontos - quadradoMenosPontos;
+            s = trianguloMaisPontos - trianguloMenosPontos;
+            c = musicaMaisPontos - musicaMenosPontos;
+
+
             Intent intent = new Intent(this, FinalizaTeste.class);
-            intent.putExtra("pontos", quadradoMaisPontos);
+            intent.putExtra("d", d);
+            intent.putExtra("i", i);
+            intent.putExtra("s", s);
+            intent.putExtra("c", c);
+
             startActivity(intent);
             finish();
         }
@@ -285,8 +297,7 @@ public class TesteDsicActivity extends AppCompatActivity {
     }
 
     public void Cancelar(View view) {
-        Intent intent = new Intent(TesteDsicActivity.this, MainActivity.class);
-        startActivity(intent);
+
         finish();
     }
 }

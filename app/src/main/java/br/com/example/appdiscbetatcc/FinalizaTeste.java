@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class FinalizaTeste extends AppCompatActivity {
 
+    int d,i,s,c;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,20 +18,26 @@ public class FinalizaTeste extends AppCompatActivity {
 
 
 
-        TextView resposta = (TextView)findViewById(R.id.resposta);
+
 
 
         Intent intent = getIntent();
-        int pontos = intent.getIntExtra("pontos", 0);
-
-
-
-            resposta.setText("Fez " + pontos + " pontos!");
-
-
+        d = intent.getIntExtra("d", 0);
+        i = intent.getIntExtra("i", 0);
+        s = intent.getIntExtra("s", 0);
+        c = intent.getIntExtra("c", 0);
 
 
     }
 
 
+    public void Cancelar(View view) {
+
+        finish();
+    }
+
+    public void enviaTeste(View view) {
+
+
+    }
 }
