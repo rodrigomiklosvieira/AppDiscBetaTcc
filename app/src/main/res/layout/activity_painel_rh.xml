@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PainelRHActivity">
+    tools:context=".PainelRHActivity"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
 
-</android.support.constraint.ConstraintLayout>
+    >
+
+    <Button
+
+        android:id="@+id/btnCancelar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right"
+        android:background="@drawable/sair"
+        android:onClick="Cancelar"
+        android:shadowColor="#383838"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="25"
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Painel do RH em desenvolvimento..."
+        android:textColor="@color/colorFonte"
+        android:textSize="20dp"
+
+        />
+
+</LinearLayout>

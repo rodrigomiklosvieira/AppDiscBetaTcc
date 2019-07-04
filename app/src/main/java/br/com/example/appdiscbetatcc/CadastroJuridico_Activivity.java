@@ -176,7 +176,6 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
     }
 
     public void CancelarJur(View view) {
-        Intent intent = new Intent(CadastroJuridico_Activivity.this, MainActivity.class);
-        startActivity(intent);
+        finish();
     }
 }

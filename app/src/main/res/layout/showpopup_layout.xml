@@ -20,7 +20,7 @@
         android:background="@drawable/button"
         android:padding="10dp"
         android:onClick="PJuridica"
-        android:text="Pessoa Jurídica"
+        android:text="RH/Psicólogo(a)"
         android:textAlignment="center"
         android:textColor="@color/colorFonte" />
 
@@ -33,7 +33,7 @@
         android:background="@drawable/button"
         android:padding="10dp"
         android:onClick="PFisica"
-        android:text="Pessoa Física"
+        android:text="Candidato a ser Avaliado"
         android:textAlignment="center"
         android:textColor="@color/colorFonte" />
 

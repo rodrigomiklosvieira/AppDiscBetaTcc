@@ -82,8 +82,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
 
     public void CancelarCF(View view) {
-        Intent intent = new Intent(CadastroFisico_Activity.this, MainActivity.class);
-        startActivity(intent);
+        finish();
 
     }
 

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void ShowPopup(View view) {
         Intent intent = new Intent(MainActivity.this, ShowPopup_ctivity.class);
         startActivity(intent);
-        finish();
+
 
     }
 
