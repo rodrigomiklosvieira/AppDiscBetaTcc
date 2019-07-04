@@ -1,53 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/colorBackground"
-tools:context=".FinalizaTeste"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
-    >
+    tools:context=".FinalizaTeste">
 
 
     <Button
-
-        android:text="X"
-        android:textColor="#FFFFFF"
-        android:textSize="35sp"
-        android:layout_gravity="right"
+        android:id="@+id/btnCancelar"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:layout_gravity="right"
         android:background="@drawable/sair"
+        android:onClick="Cancelar"
         android:shadowColor="#383838"
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="25"
-        android:onClick="Cancelar"
-        android:id="@+id/btnCancelar"
-        />
+        android:text="X"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp" />
 
 
+    <TextView
 
-<TextView
-
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-android:layout_marginTop="100dp"
-    android:text="Teste Finalizado!"
-    android:textAlignment="center"
-   android:textSize="40dp"
-    android:textColor="@color/colorFonte" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Teste Finalizado!"
+        android:textAlignment="center"
+        android:textColor="@color/colorFonte"
+        android:textSize="40dp" />
 
     <Button
-
-        android:onClick="enviaTeste"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_margin="10dp"
-
         android:background="@drawable/buttonmenor"
+        android:onClick="enviaTeste"
         android:padding="10dp"
         android:text="Enviar Teste"
         android:textColor="@color/colorFonte"

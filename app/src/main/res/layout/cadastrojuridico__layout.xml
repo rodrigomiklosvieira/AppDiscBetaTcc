@@ -10,162 +10,185 @@
     tools:context=".CadastroJuridico_Activivity">
 
 
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Razão Social:"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/txtRazaoSocial"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/borda" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CPF / CNPJ:"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/txtCnpj"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/borda" />
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:text="E-mail para envio do resultado:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <EditText
-        android:id="@+id/txtEmailJurid"
-        android:layout_width="386dp"
-        android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/borda" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:text="Insira uma senha:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <EditText
-        android:id="@+id/txtSenhaJ"
-        android:layout_width="386dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/borda"
-        android:drawableRight="@drawable/ic_lock_dp"
-        android:hint=""
-        android:inputType="textPassword"
-        android:padding="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:text="Confirme sua senha:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <EditText
-        android:id="@+id/txtSenhaJConfirme"
-        android:layout_width="386dp"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/borda"
-        android:drawableRight="@drawable/ic_lock_dp"
-        android:inputType="textPassword"
-        android:padding="10dp" />
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefone:"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
-
-        <EditText
-            android:id="@+id/txtTel"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/borda" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnCancelarJurid"
-            android:onClick="CancelarJur"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
             android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:padding="10dp"
-            android:text="Cancelar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnEnviar"
-            android:onClick="EnviarJur"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:padding="10dp"
-            android:text="Enviar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:orientation="vertical">
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Razão Social:"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
 
+                <EditText
+                    android:id="@+id/txtRazaoSocial"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/borda"
+                    android:padding="5dp"
+                    android:textColor="@color/colorFonte" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CPF / CNPJ:"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtCnpj"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/borda"
+                    android:padding="5dp"
+                    android:textColor="@color/colorFonte" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="E-mail para envio do resultado:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtEmailJurid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/borda"
+                android:padding="5dp"
+                android:textColor="@color/colorFonte" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Insira uma senha:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtSenhaJ"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/borda"
+                android:drawableRight="@drawable/ic_lock_dp"
+                android:hint=""
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/colorFonte" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Confirme sua senha:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtSenhaJConfirme"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/borda"
+                android:drawableRight="@drawable/ic_lock_dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/colorFonte" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telefone:"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/txtTel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/borda"
+                    android:padding="5dp"
+                    android:textColor="@color/colorFonte" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancelarJurid"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonmenor"
+                    android:onClick="CancelarJur"
+                    android:padding="10dp"
+                    android:text="Cancelar"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/btnEnviar"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonmenor"
+                    android:onClick="EnviarJur"
+                    android:padding="10dp"
+                    android:text="Enviar"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

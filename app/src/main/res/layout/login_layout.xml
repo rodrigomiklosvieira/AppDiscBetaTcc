@@ -7,92 +7,107 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     android:theme="@style/TemaSemBarra"
-    tools:context=".Login_Activity"
-    >
+    tools:context=".Login_Activity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="150dp"
-        android:text="Email:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <EditText
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:id="@+id/txtLogin"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@drawable/borda" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="40dp"
-        android:text="Insira sua senha:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <EditText
-        android:id="@+id/txtSenhaLogin"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/borda"
-        android:drawableRight="@drawable/ic_lock_dp"
-        android:inputType="textPassword"
-        android:padding="10dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:text="Esqueceu sua senha?"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <LinearLayout
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="180dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnCancelarLog"
-            android:onClick="CancelarLog"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:padding="10dp"
-            android:text="Cancelar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnEntrar"
-            android:onClick="Entrar"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:padding="10dp"
-            android:text="Entrar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="150dp"
+                android:text="Email:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/txtLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borda"
+                android:textColor="@color/colorFonte"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="40dp"
+                android:text="Insira sua senha:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/txtSenhaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/borda"
+                android:drawableRight="@drawable/ic_lock_dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/colorFonte"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Esqueceu sua senha?"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="180dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCancelarLog"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonmenor"
+                    android:onClick="CancelarLog"
+                    android:padding="10dp"
+                    android:text="Cancelar"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:id="@+id/btnEntrar"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/buttonmenor"
+                    android:onClick="Entrar"
+                    android:padding="10dp"
+                    android:text="Entrar"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
-
