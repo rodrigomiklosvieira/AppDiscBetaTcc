@@ -38,6 +38,7 @@ public class TesteDsicActivity extends AppCompatActivity {
     RadioGroup rgMais;
     RadioGroup rgMenos;
     int d,i,s,c;
+    String email;
 
 
 
@@ -56,6 +57,8 @@ public class TesteDsicActivity extends AppCompatActivity {
         pergunta4 = (TextView)findViewById(R.id.pergunta4);
         rgMais = (RadioGroup)findViewById(R.id.rgMais);
         rgMenos = (RadioGroup)findViewById(R.id.rgMenos);
+        Intent intent = getIntent();
+        email = intent.getStringExtra("login");
     }
 
     public void btnResponderOnClick(View view) {
@@ -282,7 +285,7 @@ public class TesteDsicActivity extends AppCompatActivity {
             intent.putExtra("i", i);
             intent.putExtra("s", s);
             intent.putExtra("c", c);
-
+            intent.putExtra("login", email);
             startActivity(intent);
             finish();
         }

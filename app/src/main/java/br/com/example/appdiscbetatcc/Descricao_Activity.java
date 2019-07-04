@@ -182,6 +182,7 @@ public class Descricao_Activity extends AppCompatActivity {
                             if (isErro) {
 
                                 Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
+                                intent.putExtra("login", email);
                                 startActivity(intent);
 
 
