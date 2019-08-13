@@ -41,11 +41,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:layout_margin="10dp"
-        android:text="Frase: “Eu sei o que eu quero”
-São pessoas que possuem mais facilidade em lidar com desafios, pois são determinadas, exigentes, ousadas e assertivas. Por outro lado, essas pessoas não são muito atenciosas com os sentimentos e necessidades dos outros, podendo se tornar egoístas."
+        android:text="@string/desc_dominancia"
         android:textColor="#ffff"
         android:textSize="25dp" />
 </LinearLayout>

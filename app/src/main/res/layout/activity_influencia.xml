@@ -40,11 +40,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:layout_margin="10dp"
-        android:text="Frase: “Juntos somos mais fortes”
-São pessoas mais emocionais e que possuem grande habilidade em influenciar pessoas. São animadas, entusiasmadas, extrovertidas e motivadoras. Sabem persuadir, se comunicar e manter o otimismo. Entretanto, essas pessoas constantemente iniciam projetos e não os terminam, e seu entusiasmo pode parecer superficialidade para os outros."
+        android:text="@string/desc_influencia"
         android:textColor="#ffff"
         android:textSize="25dp" />
 

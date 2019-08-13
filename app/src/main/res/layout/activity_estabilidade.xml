@@ -40,11 +40,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:layout_margin="10dp"
-        android:text="Frase: “Seria melhor uma abordagem mais calma”
-São pessoas que lidam melhor com rotinas e padrões. São paciêncientes, tranquilas, confiáveis, leais, persistentes e gentis. Por outro lado, a estabilidade muitas vezes é acompanhada pelo medo das mudanças e uma grande falta de iniciativa. Pessoas com essa tendência de comportamento possuem dificuldade em lidar com conflitos."
+        android:text="@string/desc_estabilidade"
         android:textColor="#ffff"
         android:textSize="25dp" />
 
