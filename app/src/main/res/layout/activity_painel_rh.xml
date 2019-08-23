@@ -35,4 +35,14 @@
 
         />
 
+    <Spinner
+        android:id="@+id/selecionadados"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/spinner"
+        android:spinnerMode="dropdown" />
+
+
 </LinearLayout>
