@@ -28,7 +28,7 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="Painel do RH em desenvolvimento..."
         android:textColor="@color/colorFonte"
         android:textSize="20dp"
@@ -43,6 +43,14 @@
         android:layout_marginRight="15dp"
         android:background="@drawable/spinner"
         android:spinnerMode="dropdown" />
+
+    <ListView
+    android:id="@+id/LstPainel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+</ListView>
 
 
 </LinearLayout>
