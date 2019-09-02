@@ -1,16 +1,23 @@
 package br.com.example.appdiscbetatcc;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     Button sairSistema;
     Button Cadastrar;
     Button Login;
+    Dialog dialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +27,58 @@ public class MainActivity extends AppCompatActivity {
         sairSistema = (Button)findViewById(R.id.btnSair);
         Cadastrar = (Button)findViewById(R.id.btnCadastrar);
         Login = (Button)findViewById(R.id.btnLogin);
+        dialog = new Dialog(this);
+
+    }
+
+    public void test(){
+        Button PJuridica;
+        Button PFisica;
+        TextView txtclose;
+        dialog.setContentView(R.layout.showpopup_layout);
+
+        txtclose =(TextView) dialog.findViewById(R.id.txtclose);
+
+
+        PJuridica = (Button) dialog.findViewById(R.id.btnJuridico);
+        PFisica = (Button) dialog.findViewById(R.id.btnFisica);
+
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+
+                dialog.dismiss();
+            }
+        });
+
+       PJuridica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+
+                Intent intent = new Intent(MainActivity.this, CadastroJuridico_Activivity.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+
+        PFisica.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this, CadastroFisico_Activity.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+
+
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
     }
 
     public void ShowPopup(View view) {
-        Intent intent = new Intent(MainActivity.this, ShowPopup_ctivity.class);
-        startActivity(intent);
+      test();
 
 
     }

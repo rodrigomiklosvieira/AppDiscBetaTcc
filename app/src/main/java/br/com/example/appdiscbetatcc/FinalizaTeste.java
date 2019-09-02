@@ -28,6 +28,7 @@ public class FinalizaTeste extends AppCompatActivity {
     StringRequest stringRequest;
     RequestQueue requestQueue;
     String email;
+    Button enviateste;
 
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class FinalizaTeste extends AppCompatActivity {
         setContentView(R.layout.activity_finaliza_teste);
 
         requestQueue = Volley.newRequestQueue(this);
-
+        enviateste = (Button) findViewById(R.id.enviateste);
 
 
         Intent intent = getIntent();
@@ -55,6 +56,7 @@ public class FinalizaTeste extends AppCompatActivity {
 
     public void enviaTeste(View view) {
    validaEnvio();
+        enviateste.setEnabled(false);
 
     }
 
@@ -73,7 +75,9 @@ public class FinalizaTeste extends AppCompatActivity {
                             if (isErro) {
 
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
+                                enviateste.setEnabled(true);
                             } else {
+
                                 Toast.makeText(getApplicationContext(), "TESTE enviado com sucesso!", Toast.LENGTH_LONG).show();
                                 finish();
 
@@ -81,7 +85,8 @@ public class FinalizaTeste extends AppCompatActivity {
 
                         } catch (Exception e) {
 
-                            Log.v("LogCadastro", e.getMessage());
+                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                            enviateste.setEnabled(true);
                         }
 
                     }
@@ -89,7 +94,8 @@ public class FinalizaTeste extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e("Loglogin", error.getMessage());
+                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                        enviateste.setEnabled(true);
                     }
                 }) {
             protected Map<String, String> getParams() {

@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TemaSemBarra">
+        <activity android:name=".ListarDadosCandidatos"></activity>
         <activity android:name=".cautela_Activity" />
         <activity android:name=".estabilidade_Activity" />
         <activity android:name=".influencia_Activity" />
@@ -23,7 +24,6 @@
         <activity android:name=".Descricao_Activity" />
         <activity android:name=".CadastroJuridico_Activivity" />
         <activity android:name=".CadastroFisico_Activity" />
-        <activity android:name=".ShowPopup_ctivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/TemaSemBarra">

@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:orientation="vertical"
-    tools:context=".TesteDsicActivity">
+    tools:context=".TesteDsicActivity"
+
+
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -127,6 +130,7 @@
 
 
             <RadioGroup
+
                 android:id="@+id/rgMais"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -140,31 +144,37 @@
 
 
                 <RadioButton
+
+
                     android:id="@+id/rbQuadradoMais"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/radio"
+                    android:button="@drawable/custom_btn_radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio"
                     android:id="@+id/rbZmais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio"
                     android:id="@+id/rbMusicaMais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio"
                     android:id="@+id/rbTrianguloMais"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             </RadioGroup>
@@ -182,31 +192,35 @@
 
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio2"
                     android:id="@+id/rbQuadradoMenos"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio2"
                     android:id="@+id/rbZmenos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio2"
                     android:id="@+id/rbMusicaMenos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
                 <RadioButton
+                    android:button="@drawable/custom_btn_radio2"
                     android:id="@+id/rbTrianguloMenos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/radio"
+
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             </RadioGroup>

@@ -29,9 +29,17 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Painel do RH em desenvolvimento..."
+
+
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="40dp"
+        android:text="bem vindo"
+        android:textAlignment="center"
         android:textColor="@color/colorFonte"
-        android:textSize="20dp"
+        android:textSize="40dp"
+
+        android:id="@+id/textorh"
 
         />
 

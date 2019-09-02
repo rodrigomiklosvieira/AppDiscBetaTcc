@@ -1,38 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
-    android:orientation="vertical"
+
     android:theme="@style/TemaSemBarra"
     tools:context=".CadastroFisico_Activity">
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro: Candidato"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+      android:padding="5dp"
+        android:gravity="center"
+        android:background="#3F51B5"
+        />
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        >
+
+
+
+
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+
+
+            >
+
+
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome Completo:"
             android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+
+            />
 
         <EditText
             android:id="@+id/txtNomeFisico"
@@ -40,25 +74,29 @@
             android:layout_height="40dp"
             android:background="@drawable/borda"
             android:textColor="@color/colorFonte"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+
+            />
 
 
-    </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CPF:"
             android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+
+            />
 
         <EditText
             android:id="@+id/txtCpfFisico"
@@ -66,150 +104,217 @@
             android:layout_height="40dp"
             android:background="@drawable/borda"
             android:textColor="@color/colorFonte"
-            android:padding="5dp"/>
-    </LinearLayout>
+            android:padding="5dp"
+            android:inputType="number"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+
+            />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
+
         android:text="E-mail:"
         android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+
+        />
 
     <EditText
         android:id="@+id/txtEmailFisico"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
+
         android:background="@drawable/borda"
         android:textColorHint="@color/colorFonte"
         android:textColor="@color/colorFonte"
-        android:padding="5dp"/>
+        android:padding="5dp"
+        android:inputType="textEmailAddress"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+
+
+                />
+
+            <EditText
+                android:id="@+id/txtTel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borda"
+                android:textColor="@color/colorFonte"
+                android:padding="5dp"
+                android:inputType="number"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Selecione a empresa:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <Spinner
+                android:id="@+id/chbEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@drawable/spinner"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/colorFonte"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+
+
+                />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
+
         android:text="Insira uma senha:"
         android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        />
 
     <EditText
         android:id="@+id/txtSenha"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
+
         android:background="@drawable/borda"
         android:drawableRight="@drawable/ic_lock_dp"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:textColor="@color/colorFonte"/>
+        android:textColor="@color/colorFonte"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+
+        />
+
+
+
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
+
         android:text="Confirme sua senha:"
         android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
 
-    <EditText
-        android:id="@+id/txtSenhaConfirme"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/borda"
-        android:drawableRight="@drawable/ic_lock_dp"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        android:textColor="@color/colorFonte"/>
+        />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+            <EditText
+                android:id="@+id/txtSenhaConfirme"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Telefone:"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/borda"
+                android:drawableRight="@drawable/ic_lock_dp"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@color/colorFonte"
+                android:layout_marginBottom="100dp"
 
-        <EditText
-            android:id="@+id/txtTel"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@drawable/borda"
-            android:textColor="@color/colorFonte"
-            android:padding="5dp"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="10dp"
-        android:text="Selecione a empresa:"
-        android:textColor="@color/colorFonte"
-        android:textSize="20dp" />
-
-    <Spinner
-        android:id="@+id/chbEmpresa"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/spinner"
-        android:spinnerMode="dropdown"
-        android:textColor="@color/colorFonte"
-        android:padding="5dp"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnCancelarFisico"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:onClick="CancelarCF"
-            android:padding="10dp"
-            android:text="Cancelar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
-
-        <Button
-            android:id="@+id/btnEnviar"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/buttonmenor"
-            android:onClick="EnviarCF"
-            android:padding="10dp"
-            android:text="Enviar"
-            android:textColor="@color/colorFonte"
-            android:textSize="20dp" />
-
-    </LinearLayout>
+                />
 
         </LinearLayout>
 
     </ScrollView>
 
+    </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelarFisico"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+
+                android:layout_weight="1"
+                android:background="#F44336"
+                android:onClick="CancelarCF"
+
+                android:text="Cancelar"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+
+                android:layout_weight="1"
+                android:background="#4CAF50"
+                android:onClick="EnviarCF"
+
+                android:text="Cadastrar"
+                android:textColor="#fff"
+                android:textSize="20dp"
+
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

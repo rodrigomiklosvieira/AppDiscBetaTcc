@@ -113,7 +113,11 @@ public class Login_Activity extends AppCompatActivity {
                                     finish();
 
                                 }else if(nivel==2){
+                                    String empresaidlogin = (jsonObject.getString("empresaidlogin"));
+                                   String empresalogin = (jsonObject.getString("empresalogin"));
                                     Intent intent = new Intent(Login_Activity.this, PainelRHActivity.class);
+                                    intent.putExtra("empresalogin", empresalogin);
+                                    intent.putExtra("empresaidlogin",empresaidlogin);
                                     startActivity(intent);
                                     finish();
 

@@ -75,7 +75,7 @@ public class Descricao_Activity extends AppCompatActivity {
 
 
 
-        nome.setText("Bem-Vindo, " + usuario + ".");
+        nome.setText("Bem-Vindo(a), " + usuario + ".");
         nomeempresaa.setText("O TESTE será enviado para: " + nomeemp + ".");
 
         Iniciar = (Button)findViewById(R.id.btnIniciar);

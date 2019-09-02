@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -21,6 +22,11 @@ public class TesteDsicActivity extends AppCompatActivity {
     int musicaMais = R.id.rbMusicaMais;
     int trianguloMais = R.id.rbTrianguloMais;
 
+    int quadradoMais2 = R.id.rbQuadradoMais;
+    int zMais2 = R.id.rbZmais;
+    int musicaMais2 = R.id.rbMusicaMais;
+    int trianguloMais2 = R.id.rbTrianguloMais;
+
     int quadradoMaisPontos;
     int zMaisPontos;
     int musicaMaisPontos;
@@ -31,6 +37,11 @@ public class TesteDsicActivity extends AppCompatActivity {
     int musicaMenos = R.id.rbMusicaMenos;
     int trianguloMenos = R.id.rbTrianguloMenos;
 
+    int quadradoMenos2 = R.id.rbQuadradoMenos;
+    int zMenos2 = R.id.rbZmenos;
+    int musicaMenos2 = R.id.rbMusicaMenos;
+    int trianguloMenos2 = R.id.rbTrianguloMenos;
+
     int quadradoMenosPontos;
     int zMenosPontos;
     int musicaMenosPontos;
@@ -39,6 +50,9 @@ public class TesteDsicActivity extends AppCompatActivity {
     RadioGroup rgMenos;
     int d,i,s,c;
     String email;
+    Button proximo;
+
+
 
 
 
@@ -49,7 +63,7 @@ public class TesteDsicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teste_dsic);
 
-
+        proximo = (Button) findViewById(R.id.btnResponder);
         numPergunta = (TextView)findViewById(R.id.numPergunta);
         pergunta1 = (TextView)findViewById(R.id.pergunta1);
         pergunta2 = (TextView)findViewById(R.id.pergunta2);
@@ -59,15 +73,25 @@ public class TesteDsicActivity extends AppCompatActivity {
         rgMenos = (RadioGroup)findViewById(R.id.rgMenos);
         Intent intent = getIntent();
         email = intent.getStringExtra("login");
+
+
+
+
     }
 
     public void btnResponderOnClick(View view) {
 
+        if((rgMais.getCheckedRadioButtonId() == quadradoMais2 || rgMais.getCheckedRadioButtonId() == zMais2 || rgMais.getCheckedRadioButtonId() == musicaMais2 || rgMais.getCheckedRadioButtonId() == trianguloMais2) &&
+                (rgMenos.getCheckedRadioButtonId() == quadradoMenos2 || rgMenos.getCheckedRadioButtonId() == zMenos2  || rgMenos.getCheckedRadioButtonId() == musicaMenos2  || rgMenos.getCheckedRadioButtonId() == trianguloMenos2 )
+
+        ){
 
 
 
         RadioButton rb = (RadioButton)findViewById(rgMais.getCheckedRadioButtonId());
         RadioButton rbmenos2 = (RadioButton)findViewById(rgMenos.getCheckedRadioButtonId());
+
+
 
 
         if(rgMais.getCheckedRadioButtonId() == quadradoMais) {
@@ -97,7 +121,20 @@ public class TesteDsicActivity extends AppCompatActivity {
 
 
 
+
         onRestart();
+
+
+
+
+
+        }else{
+
+            Toast.makeText(getApplicationContext(), "Selecione alguma das opções!", Toast.LENGTH_LONG).show();
+
+        }
+
+
 
 
     }
@@ -248,6 +285,7 @@ public class TesteDsicActivity extends AppCompatActivity {
 
         if(questoes.size() > 0) {
 
+
         questao q = questoes.remove(0);
         numPergunta.setText(q.getPergunta());
         List<String> resposta = q.getRespostas();
@@ -261,19 +299,21 @@ public class TesteDsicActivity extends AppCompatActivity {
          musicaMais = q.getMusicaMais();
          trianguloMais = q.getTrianguloMais();
 
+
         quadradoMenos = q.getQuadradoMenos();
         zMenos = q.getzMenos();
         musicaMenos = q.getMusicaMenos();
         trianguloMenos = q.getTrianguloMenos();
 
 
-            rgMais.setSelected(false);
-            rgMenos.setSelected(false);
+
+
+
 
 
         }
         else{ //acabaram as questões
-
+            proximo.setEnabled(false);
             d = zMaisPontos - zMenosPontos;
             i = quadradoMaisPontos - quadradoMenosPontos;
             s = trianguloMaisPontos - trianguloMenosPontos;
@@ -297,6 +337,10 @@ public class TesteDsicActivity extends AppCompatActivity {
     protected void onRestart(){
         super.onRestart();
         carregarQuestao();
+        rgMais.clearCheck();
+        rgMenos.clearCheck();
+
+
     }
 
     public void Cancelar(View view) {

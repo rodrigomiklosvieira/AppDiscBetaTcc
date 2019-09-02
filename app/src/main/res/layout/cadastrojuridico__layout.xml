@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,25 @@
     android:orientation="vertical"
     android:theme="@style/TemaSemBarra"
     tools:context=".CadastroJuridico_Activivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro: RH/Psicólogo(a)"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="#3F51B5"
+        />
 
 
     <ScrollView
@@ -20,19 +39,19 @@
             android:layout_margin="10dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
-                android:orientation="vertical">
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Razão Social:"
+                    android:text="Nome / Razão Social:"
                     android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="5dp"
+
+                    />
 
                 <EditText
                     android:id="@+id/txtRazaoSocial"
@@ -40,25 +59,30 @@
                     android:layout_height="40dp"
                     android:background="@drawable/borda"
                     android:padding="5dp"
-                    android:textColor="@color/colorFonte" />
+                    android:textColor="@color/colorFonte"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+
+                    />
 
 
-            </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CPF / CNPJ:"
                     android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    />
 
                 <EditText
                     android:id="@+id/txtCnpj"
@@ -66,129 +90,192 @@
                     android:layout_height="40dp"
                     android:background="@drawable/borda"
                     android:padding="5dp"
-                    android:textColor="@color/colorFonte" />
-            </LinearLayout>
+                    android:textColor="@color/colorFonte"
+                    android:inputType="number"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    />
+
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+
                 android:text="E-mail para envio do resultado:"
                 android:textColor="@color/colorFonte"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+
+                />
 
             <EditText
                 android:id="@+id/txtEmailJurid"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginLeft="15dp"
+
                 android:background="@drawable/borda"
                 android:padding="5dp"
-                android:textColor="@color/colorFonte" />
+                android:textColor="@color/colorFonte"
+                android:inputType="textWebEmailAddress"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+                android:text="Telefone:"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <EditText
+                android:id="@+id/txtTel"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/borda"
+                android:padding="5dp"
+                android:textColor="@color/colorFonte"
+                android:inputType="number"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
                 android:text="Insira uma senha:"
                 android:textColor="@color/colorFonte"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+
+                />
 
             <EditText
                 android:id="@+id/txtSenhaJ"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
+                android:layout_height="40dp"
+
                 android:background="@drawable/borda"
                 android:drawableRight="@drawable/ic_lock_dp"
                 android:hint=""
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/colorFonte" />
+                android:textColor="@color/colorFonte"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
+
                 android:text="Confirme sua senha:"
                 android:textColor="@color/colorFonte"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+
+                />
 
             <EditText
                 android:id="@+id/txtSenhaJConfirme"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15dp"
+                android:layout_height="40dp"
+
                 android:background="@drawable/borda"
                 android:drawableRight="@drawable/ic_lock_dp"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textColor="@color/colorFonte" />
+                android:textColor="@color/colorFonte"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="100dp"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Telefone:"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
-
-                <EditText
-                    android:id="@+id/txtTel"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/borda"
-                    android:padding="5dp"
-                    android:textColor="@color/colorFonte" />
-            </LinearLayout>
+                />
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="40dp"
-                android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btnCancelarJurid"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="CancelarJur"
-                    android:padding="10dp"
-                    android:text="Cancelar"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
 
-                <Button
-                    android:id="@+id/btnEnviar"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="10dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="EnviarJur"
-                    android:padding="10dp"
-                    android:text="Enviar"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
 
-            </LinearLayout>
+
+
+
 
         </LinearLayout>
 
     </ScrollView>
 
-</LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+
+
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelarJurid"
+
+
+
+
+            android:onClick="CancelarJur"
+
+            android:text="Cancelar"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+
+            android:layout_weight="1"
+            android:background="#F44336"
+
+            />
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:onClick="EnviarJur"
+            android:padding="10dp"
+            android:text="Cadastrar"
+            android:textColor="#ffff"
+            android:textSize="20dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+
+            android:layout_weight="1"
+            android:background="#4CAF50"
+
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -55,9 +55,14 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
         txtSenhaJConfirme = findViewById(R.id.txtSenhaJConfirme);
         txtTel = findViewById(R.id.txtTel);
 
+        txtTel.addTextChangedListener(mascara.insert("(##)#####-####", txtTel));
+
+        txtCnpj.addTextChangedListener(mascara.insert("##.###.###/####-##", txtCnpj));
+
     }
 
     public void EnviarJur(View view) {
+
         boolean validado = true;
 
         if (txtRazaoSocial.getText().length() == 0) {
@@ -106,6 +111,22 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validado = false;
         }
 
+        if(txtTel.getText().length()<13){
+
+            txtTel.setError("Preencha o campo com DD + telefone");
+            txtTel.requestFocus();
+            validado = false;
+
+        }
+
+        if(txtCnpj.getText().length()<14){
+
+            txtCnpj.setError("Preencha o campo com 11 numeros para cpf ou 14 numeros para cnpj");
+            txtCnpj.requestFocus();
+            validado = false;
+
+        }
+
 
         if (validado) {
 
@@ -118,6 +139,7 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
 
 
     private void validarCadastro() {
+        Enviar.setEnabled(false);
 
         stringRequest = new StringRequest(Request.Method.POST, urlwebservices,
                 new Response.Listener<String>() {
@@ -142,7 +164,8 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
 
                         } catch (Exception e) {
 
-                            Log.v("LogCadastro", e.getMessage());
+                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                            Enviar.setEnabled(true);
                         }
 
                     }
@@ -150,7 +173,8 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e("Loglogin", error.getMessage());
+                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                        Enviar.setEnabled(true);
                     }
                 }) {
             protected Map<String, String> getParams() {

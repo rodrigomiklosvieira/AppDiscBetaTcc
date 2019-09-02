@@ -2,13 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="150dp"
-    android:layout_gravity="center"
-    android:background="@color/colorBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+
     android:theme="@style/TemaSemBarra"
     android:orientation="vertical"
-    tools:context=".ShowPopup_ctivity">
+   >
+    
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="475dp"
+        android:orientation="vertical"
+        android:background="#2A2E38"
+        android:layout_gravity="center"
+        >
+
+
+    <TextView
+        android:id="@+id/txtclose"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:textColor="#ffff"
+        android:text="X"
+        android:textStyle="bold"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:background="@drawable/ic_radio_button"
+
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="#3F51B5"
+        android:layout_marginBottom="100dp"
+        />
+
+
 
     <Button
         android:id="@+id/btnJuridico"
@@ -16,13 +54,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:background="@drawable/button"
+
+        android:background="#ffff"
         android:padding="10dp"
         android:onClick="PJuridica"
         android:text="RH/Psicólogo(a)"
         android:textAlignment="center"
-        android:textColor="@color/colorFonte" />
+        android:textColor="#000" />
 
     <Button
         android:id="@+id/btnFisica"
@@ -30,11 +68,13 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"
-        android:background="@drawable/button"
+        android:background="#ffff"
         android:padding="10dp"
         android:onClick="PFisica"
         android:text="Candidato a ser Avaliado"
         android:textAlignment="center"
-        android:textColor="@color/colorFonte" />
+        android:textColor="#000" />
+
+    </LinearLayout>
 
 </LinearLayout>

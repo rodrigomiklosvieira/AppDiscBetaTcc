@@ -13,6 +13,7 @@ public class questao {
     int musicaMais ;
     int trianguloMais ;
 
+
     int quadradoMenos ;
     int zMenos ;
     int musicaMenos ;
@@ -44,6 +45,7 @@ public class questao {
     public int getzMais(){ return this.zMais; }
     public int getMusicaMais(){ return this.musicaMais; }
     public int getTrianguloMais(){ return this.trianguloMais; }
+
 
     public int getQuadradoMenos(){ return this.quadradoMenos; }
     public int getzMenos(){ return this.zMenos; }

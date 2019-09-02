@@ -2,6 +2,8 @@ package br.com.example.appdiscbetatcc;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -57,6 +60,9 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     String nomeempresa;
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,7 +82,17 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         chbEmpresa = (Spinner) findViewById(R.id.chbEmpresa);
 
 
+        txtTel.addTextChangedListener(mascara.insert("(##)#####-####", txtTel));
+
+        txtCpfFisico.addTextChangedListener(mascara.insert("###.###.###-##", txtCpfFisico));
+
+
+
+
         selecionaEmpresa();
+
+
+
 
     }
 
@@ -87,6 +103,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     }
 
     public void EnviarCF(View view) {
+
+
 
         boolean validado = true;
 
@@ -131,9 +149,25 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         }
 
         if (txtTel.getText().length() == 0) {
-            txtTel.setError("Campo email Obrigatório");
+            txtTel.setError("Campo telefone Obrigatório");
             txtTel.requestFocus();
             validado = false;
+        }
+
+        if(txtTel.getText().length()<13){
+
+            txtTel.setError("Preencha o campo com DD + telefone");
+            txtTel.requestFocus();
+            validado = false;
+
+        }
+
+        if(txtCpfFisico.getText().length()<14){
+
+            txtCpfFisico.setError("Preencha o campo com 11 numeros");
+            txtCpfFisico.requestFocus();
+            validado = false;
+
         }
 
 
@@ -146,9 +180,13 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         }
 
 
+
+
     }
 
     private void validarCadastro() {
+
+        EnviarCF.setEnabled(false);
 
         stringRequest = new StringRequest(Request.Method.POST, urlwebservices,
                 new Response.Listener<String>() {
@@ -164,6 +202,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
+
+
                                String nome = txtNomeFisico.getText().toString();
 
                                String email = txtEmailFisico.getText().toString();
@@ -178,7 +218,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
                         } catch (Exception e) {
 
-                            Log.v("LogCadastro", e.getMessage());
+                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                            EnviarCF.setEnabled(true);
                         }
 
                     }
@@ -186,7 +227,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Log.e("Loglogin", error.getMessage());
+                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                        EnviarCF.setEnabled(true);
                     }
                 }) {
             protected Map<String, String> getParams() {
@@ -261,6 +303,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                                     @Override
                                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                                        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
                                         nomeempresa =names.get(position);
                                         id2 = ida.get(position);
                                         // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
@@ -279,7 +323,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
                         } catch (JSONException e) {
 
-                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+
                         }
 
                     }
@@ -287,7 +332,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+
                     }
                 });
 
