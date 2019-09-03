@@ -1,15 +1,21 @@
 package br.com.example.appdiscbetatcc;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -41,6 +47,8 @@ public class PainelRHActivity extends AppCompatActivity {
     private ArrayList<spinner> goodModelArrayList;
 
 
+
+
     StringRequest stringRequest;
     RequestQueue requestQueue;
     String nomeempresa;
@@ -50,16 +58,22 @@ public class PainelRHActivity extends AppCompatActivity {
     String itemSelecionado;
     ListView LstPainel;
     String id_empresa;
-    String[] nome,telefone,email;
+    String nome,telefone,email;
     String teste;
-    private ArrayList<candidato> candidato;
+    int posicao;
+    EditText eText;
 
-    private ArrayList<String> nome_candidatos = new ArrayList<String>();
-    private ArrayList<String> email_candidatos = new ArrayList<String>();
+    List<candidato> candidatoList;
+
+    ArrayList<String> pesquisa = new ArrayList<String>();
+
+
+
+
 
     String urlwebservices = "https://carlos.cf/apiRest/buscacandidato.php";
 
-    String[] nome2 = {"teste","teste","teste"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,69 +88,22 @@ public class PainelRHActivity extends AppCompatActivity {
         String nomeemp = intent.getStringExtra("empresalogin");
         id_empresa= intent.getStringExtra("empresaidlogin");
         nomeempresaa.setText("Bem-Vindo(a), " + nomeemp + ".");
-        LstPainel = findViewById(R.id.LstPainel);
+        LstPainel = (ListView)findViewById(R.id.LstPainel);
+        candidatoList = new ArrayList<>();
+        eText = (EditText) findViewById(R.id.eText);
 
 
 
-        CustomAdapter customAdapter = new CustomAdapter();
-        LstPainel.setAdapter(customAdapter);
         LstPainel.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(),ListarDadosCandidatos.class);
-                intent.putExtra("name",nome2[position]);
+                final candidato cand = candidatoList.get(position);
+                intent.putExtra("name",cand.getId());
 
                 startActivity(intent);
             }
         });
-
-
-
-
-        selecionaCandidato();
-
-        spinner();
-
-
-
-
-
-    }
-
-    class CustomAdapter extends BaseAdapter {
-        @Override
-        public int getCount() {
-            return nome2.length;
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return null;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return 0;
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-
-
-            View view1 = getLayoutInflater().inflate(R.layout.carrega_lista_rh, null);
-
-            TextView name = (TextView) view1.findViewById(R.id.nome);
-
-
-            name.setText(nome2[position]);
-
-
-
-            return view1;
-        }
-    }
-
-    public void spinner(){
 
 
         spinner = (Spinner) findViewById(R.id.selecionadados);
@@ -154,20 +121,80 @@ public class PainelRHActivity extends AppCompatActivity {
 
                 ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
 
-                int posicao = spinner.getSelectedItemPosition();
+
+                selecionaCandidato();
+                posicao = spinner.getSelectedItemPosition();
                 itemSelecionado = lista.get(posicao);
-              // Toast.makeText(getApplicationContext(),"teste"+teste,Toast.LENGTH_SHORT).show();
+
+
+
+               CandidatoAdapter adapter = new CandidatoAdapter(candidatoList);
+             LstPainel.setAdapter(adapter);
 
             }
 
+            @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
+            }
+
+
+        });
+
+
+      //  Pesquisar();
+
+        eText.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable arg0) {
+                // TODO Auto-generated method stub
+            }
+
+            public void beforeTextChanged(CharSequence arg0, int arg1,
+                                          int arg2, int arg3) {
+                // TODO Auto-generated method stub
+            }
+
+            public void onTextChanged(CharSequence arg0, int arg1, int arg2,
+                                      int arg3) {
+        //        Pesquisar();
+
+                LstPainel.setAdapter(new ArrayAdapter<String>(PainelRHActivity.this, android.R.layout.simple_list_item_1, pesquisa));
             }
         });
 
 
 
+
+
+
+        selecionaCandidato();
+
+
+
+
+
+
+
     }
+
+
+ /*   public void Pesquisar() {
+        int textlength = eText.getText().length();
+        pesquisa.clear();
+
+
+
+        for (int i = 0; i < candidato.length; i++) {
+            if (textlength <= lstFrutas[i].length()) {
+                if (eText.getText().toString().equalsIgnoreCase((String) lstFrutas[i].subSequence(0, textlength))) {
+                    pesquisa.add(lstFrutas[i]);
+                }
+            }
+        }
+
+    }
+*/
 
 
 
@@ -191,45 +218,37 @@ public class PainelRHActivity extends AppCompatActivity {
 
                         try {
                             JSONObject jsonObject = new JSONObject(response);
+                            boolean isErro = jsonObject.getBoolean("erro");
+
+                            if (isErro) {
+
+                                Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
+                            } else {
+
+                                candidatoList.clear();
 
 
-                            if (jsonObject.optString("status").equals("true")) {
-
-                                candidato = new ArrayList<>();
 
                                 JSONArray dataArray = jsonObject.getJSONArray("data");
 
-
-
-
-
                                 for (int i = 0; i < dataArray.length(); i++) {
 
-                                    candidato candidato2 = new candidato();
-
-                                    JSONObject dataobj = dataArray.getJSONObject(i);
-
-                                   candidato2.setNome(dataobj.getString("nome"));
-                                    candidato2.setEmail(dataobj.getString("email"));
-
-                                    candidato.add(candidato2);
-
-                                }
-
-                                for (int i = 0; i < candidato.size(); i++) {
 
 
-                                    nome_candidatos.add(candidato.get(i).getNome());
-                                    email_candidatos.add(candidato.get(i).getEmail());
+                                    JSONObject obj = dataArray.getJSONObject(i);
+
+                                    candidatoList.add(new candidato(
+                                            obj.getInt("id"),
+                                            obj.getString("nome"),
+                                            obj.getString("telefone"),
+                                            obj.getString("email")
+                                    ));
 
                                 }
 
-                                //arrumar
-
-
-                                Toast.makeText(getApplicationContext(),"teste "+nome_candidatos,Toast.LENGTH_LONG).show();
-
-
+                                CandidatoAdapter adapter = new CandidatoAdapter(candidatoList);
+                                adapter.notifyDataSetChanged();
+                                LstPainel.setAdapter(adapter);
 
 
                             }
@@ -263,4 +282,48 @@ public class PainelRHActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+
+
+    class CandidatoAdapter extends ArrayAdapter<candidato> {
+        List<candidato> candidatoList;
+
+        public CandidatoAdapter(List<candidato> candidatoList) {
+            super(PainelRHActivity.this, R.layout.carrega_lista_rh, candidatoList);
+            this.candidatoList = candidatoList;
+        }
+
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = getLayoutInflater();
+            View listViewItem = inflater.inflate(R.layout.carrega_lista_rh, null, true);
+
+            TextView textViewName = listViewItem.findViewById(R.id.nome);
+
+
+            int idposicao = spinner.getSelectedItemPosition();
+            String nome = spinner.getSelectedItem().toString();
+
+            final candidato cand = candidatoList.get(position);
+
+
+            if(idposicao  == 0) {
+
+                textViewName.setText(cand.getNome());
+
+            }else if(idposicao == 1){
+
+                textViewName.setText(cand.getEmail());
+
+            }else if(idposicao  == 2){
+
+                textViewName.setText(cand.getTelefone());
+            }
+
+            return listViewItem;
+        }
+    }
+
+
+
     }

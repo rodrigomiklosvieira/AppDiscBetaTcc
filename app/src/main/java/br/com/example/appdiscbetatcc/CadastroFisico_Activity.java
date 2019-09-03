@@ -317,7 +317,6 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                     }
                                 });
 
-
                             }
 
 
