@@ -82,9 +82,10 @@
             android:hint="Pesquisar"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColorHint="#ffff"
-
+            android:textColorHint="#949090"
+            android:drawableRight="@drawable/ic_search"
             android:background="@drawable/borda"
+            android:padding="10dp"
 
             />
 
