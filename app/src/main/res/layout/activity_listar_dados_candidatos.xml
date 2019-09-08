@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListarDadosCandidatos">
+    tools:context=".ListarDadosCandidatos"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
 
-</android.support.constraint.ConstraintLayout>
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Teste"
+        android:textColor="#ffff"
+        android:textSize="25dp"
+        android:padding="5dp"
+        android:gravity="center"
+        android:background="#3F51B5"
+        />
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="Candidato: Carregando..."
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:id="@+id/id_candidato"
+        android:background="#fff"
+        android:padding="5dp"
+
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Este Candidato é mais..."
+        android:textColor="#fff"
+        android:textSize="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_corMaior"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Carregando..."
+            android:padding="10dp"
+
+            android:textSize="20dp"
+            android:id="@+id/id_maior"
+            android:textColor="#fff"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Com ascendente..."
+        android:textColor="#fff"
+        android:textSize="20dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_corSegMaior"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Carregando..."
+            android:padding="10dp"
+
+            android:textSize="20dp"
+            android:id="@+id/id_Segmaior"
+            android:textColor="#fff"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+        <WebView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webview"
+            android:layout_marginBottom="20dp"
+            >
+
+
+        </WebView>
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -60,6 +60,17 @@
 
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Lista"
+        android:background="#ffff"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="#000"
+        android:id="@+id/atualizaLista"
+        />
+
     <Spinner
         android:id="@+id/selecionadados"
         android:layout_width="match_parent"

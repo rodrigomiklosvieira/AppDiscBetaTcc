@@ -126,6 +126,12 @@ public class CadastroFisico_Activity extends AppCompatActivity {
             validado = false;
         }
 
+        if (validateEmailFormat(txtEmailFisico.getText().toString())==false) {
+            txtEmailFisico.setError("Digite um email válido");
+            txtEmailFisico.requestFocus();
+            validado = false;
+        }
+
         if (txtSenha.getText().length() == 0) {
             txtSenha.setError("Campo senha Obrigatório");
             txtSenha.requestFocus();
@@ -182,6 +188,13 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
 
 
+    }
+
+    private boolean validateEmailFormat(final String email) {
+        if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return true;
+        }
+        return false;
     }
 
     private void validarCadastro() {

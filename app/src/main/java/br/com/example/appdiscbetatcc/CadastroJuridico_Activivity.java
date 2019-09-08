@@ -83,6 +83,12 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validado = false;
         }
 
+        if (validateEmailFormat(txtEmailJurid.getText().toString())==false) {
+            txtEmailJurid.setError("Digite um email válido!");
+            txtEmailJurid.requestFocus();
+            validado = false;
+        }
+
         if (txtSenhaJ.getText().length() == 0) {
             txtSenhaJ.setError("Campo senha Obrigatório");
             txtSenhaJ.requestFocus();
@@ -106,7 +112,7 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
         }
 
         if (txtTel.getText().length() == 0) {
-            txtTel.setError("Campo email Obrigatório");
+            txtTel.setError("Campo telefone Obrigatório");
             txtTel.requestFocus();
             validado = false;
         }
@@ -135,6 +141,13 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validarCadastro();
 
         }
+    }
+
+    private boolean validateEmailFormat(final String email) {
+        if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return true;
+        }
+        return false;
     }
 
 
