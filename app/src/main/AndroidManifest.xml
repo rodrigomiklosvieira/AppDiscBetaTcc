@@ -19,7 +19,6 @@
         <activity android:name=".FinalizaTeste" />
         <activity android:name=".TesteDsicActivity" />
         <activity android:name=".PainelRHActivity" />
-        <activity android:name=".Teste_Activity" />
         <activity android:name=".Login_Activity" />
         <activity android:name=".Descricao_Activity" />
         <activity android:name=".CadastroJuridico_Activivity" />

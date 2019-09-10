@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+
+    android:theme="@style/TemaSemBarra"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:background="#2A2E38"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_radio_button"
+            android:gravity="center"
+            android:text="X"
+            android:textColor="#ffff"
+            android:textStyle="bold"
+
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="#3F51B5"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Tema de Cor"
+            android:textColor="#ffff"
+            android:textSize="25dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            >
+
+        <Button
+            android:id="@+id/estiloPreto"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/botao_preto_estilo"
+           android:layout_marginRight="10dp"
+
+            />
+
+            <Button
+                android:id="@+id/estiloBranco"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/botao_branco_estilo"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:id="@+id/estiloAzul"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/botao_azulnot_estilo"
+                android:layout_marginRight="10dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

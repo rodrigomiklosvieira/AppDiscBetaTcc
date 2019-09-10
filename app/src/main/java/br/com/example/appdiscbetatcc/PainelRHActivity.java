@@ -46,24 +46,23 @@ import java.util.Map;
 import static android.R.layout.simple_spinner_item;
 
 public class PainelRHActivity extends AppCompatActivity {
-    Spinner selecionadados;
-    private ArrayList<String> names = new ArrayList<String>();
-    private ArrayList<spinner> goodModelArrayList;
+
+
+
     StringRequest stringRequest;
     RequestQueue requestQueue;
-    String nomeempresa;
+
     TextView nomeempresaa;
     Spinner spinner;
     List<String> lista;
     String itemSelecionado;
     ListView LstPainel;
     String id_empresa;
-    String nome, telefone, email;
-    String teste;
+
     int posicao;
     EditText eText;
     List<candidato> candidatoList;
-    ArrayList<String> pesquisa = new ArrayList<String>();
+
     Dialog dialog;
     String urlwebservices = "https://carlos.cf/apiRest/buscacandidato.php";
     String urlwebservices2 = "https://carlos.cf/apiRest/verteste.php";
@@ -122,28 +121,6 @@ public class PainelRHActivity extends AppCompatActivity {
             }
 
 
-        });
-
-
-        Pesquisar();
-
-        eText.addTextChangedListener(new TextWatcher() {
-
-            public void afterTextChanged(Editable arg0) {
-                // TODO Auto-generated method stub
-            }
-
-            public void beforeTextChanged(CharSequence arg0, int arg1,
-                                          int arg2, int arg3) {
-                // TODO Auto-generated method stub
-            }
-
-            public void onTextChanged(CharSequence arg0, int arg1, int arg2,
-                                      int arg3) {
-                Pesquisar();
-
-                LstPainel.setAdapter(new ArrayAdapter<String>(PainelRHActivity.this, android.R.layout.simple_list_item_1, pesquisa));
-            }
         });
 
         selecionaCandidato();
@@ -380,25 +357,7 @@ public class PainelRHActivity extends AppCompatActivity {
 
 
 
-    public void Pesquisar() {
-        int textlength = eText.getText().length();
-        int sequenceLength = 0;
-        Integer sequenceInteger = null;
-        pesquisa.clear();
 
-
-        for (int i = 0; i < candidatoList.size(); i++) {
-            final candidato cand = candidatoList.get(i);
-            if (candidatoList.get(i).equals(cand.getId())) {
-
-                sequenceLength++;
-
-                if ((Boolean) eText.getText().toString().equalsIgnoreCase(String.valueOf(false))) {
-                    pesquisa.add(String.valueOf(candidatoList.get(i)));
-                }
-            }
-        }
-    }
 
     public void Cancelar(View view) {
         Intent intent = new Intent(PainelRHActivity.this, MainActivity.class);
@@ -442,9 +401,31 @@ public class PainelRHActivity extends AppCompatActivity {
 
                                 }
 
-                                CandidatoAdapter adapter = new CandidatoAdapter(candidatoList);
-                                adapter.notifyDataSetChanged();
+                                final CandidatoAdapter adapter = new CandidatoAdapter(candidatoList);
+                            adapter.notifyDataSetChanged();
                                 LstPainel.setAdapter(adapter);
+
+
+                                eText.addTextChangedListener(new TextWatcher() {
+                                    @Override
+
+                                    public void afterTextChanged(Editable editable) {
+
+                                    }
+                                    @Override
+                                    public void beforeTextChanged(CharSequence cs, int arg1,
+                                                                  int arg2, int arg3) {
+
+                                    }
+                                    @Override
+                                    public void onTextChanged(CharSequence cs, int arg1, int arg2,
+                                                              int arg3) {
+
+                                      adapter.getFilter().filter(cs);
+
+
+                                    }
+                                });
 
 
                             }
@@ -513,7 +494,8 @@ public class PainelRHActivity extends AppCompatActivity {
 
             } else if (idposicao == 2) {
 
-                textViewName.setText(cand.getTelefone());
+
+                textViewName.setText(mascara.addMask(cand.getTelefone(), "(##)#####-####"));
             }
 
             return listViewItem;
@@ -562,9 +544,12 @@ public class PainelRHActivity extends AppCompatActivity {
                                 c = jsonObject.getString("c");
 
 
+                                String masktel = (mascara.addMask(telefone, "(##)#####-####"));
+
+
                                     if(flag==1) {
                                         String url = "https://carlos.cf/apiRest/imprimeteste.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + " " +
-                                                "&nome=" + nome + "&telefone=" + telefone + "&email=" + email + "&maior=" + maior + "&maiorcor=" + maiorCor + "&segmaior="
+                                                "&nome=" + nome + "&telefone=" + masktel + "&email=" + email + "&maior=" + maior + "&maiorcor=" + maiorCor + "&segmaior="
                                                 + segMaior + "&segmaiorcor=" + segMaiorCor + "";
                                         Intent intent = new Intent(Intent.ACTION_VIEW);
                                         intent.setData(Uri.parse(url));

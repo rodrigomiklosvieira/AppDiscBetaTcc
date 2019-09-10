@@ -6,4 +6,9 @@
     <color name="colorBackground">#000</color>
     <color name="colorFonte">#FFFFFF</color>
 
+    <color name="preto">#000</color>
+
+    <color name="branco">#ffff</color>
+    <color name="azul">#FF1E2935</color>
+
 </resources>

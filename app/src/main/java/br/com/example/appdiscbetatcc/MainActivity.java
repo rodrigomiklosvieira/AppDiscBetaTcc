@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,8 +20,15 @@ public class MainActivity extends AppCompatActivity {
     Dialog dialog;
 
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -90,7 +98,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Sair(View view) {
-        finish();
+
+
+
     }
 
     public void dinamica(View view) {
@@ -114,4 +124,50 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, cautela_Activity.class);
         startActivity(intent);
     }
+
+    public void temas(View view) {
+        Button preto;
+
+        TextView txtclose;
+        dialog.setContentView(R.layout.popup_estilo);
+
+        txtclose =(TextView) dialog.findViewById(R.id.txtclose);
+
+
+        preto = (Button) dialog.findViewById(R.id.estiloPreto);
+
+
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+
+                dialog.dismiss();
+            }
+        });
+
+        preto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v3) {
+
+              
+
+            }
+        });
+
+
+
+
+
+
+
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        dialog.show();
+
+    }
+
+
+
+
+
 }

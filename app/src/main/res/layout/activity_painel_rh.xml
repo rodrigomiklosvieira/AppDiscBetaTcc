@@ -97,6 +97,7 @@
             android:drawableRight="@drawable/ic_search"
             android:background="@drawable/borda"
             android:padding="10dp"
+            android:textColor="#ffff"
 
             />
 

@@ -122,7 +122,9 @@ public class TesteDsicActivity extends AppCompatActivity {
 
 
 
-        onRestart();
+            carregarQuestao();
+            rgMais.clearCheck();
+            rgMenos.clearCheck();
 
 
 
@@ -333,15 +335,7 @@ public class TesteDsicActivity extends AppCompatActivity {
 
 
 
-    @Override
-    protected void onRestart(){
-        super.onRestart();
-        carregarQuestao();
-        rgMais.clearCheck();
-        rgMenos.clearCheck();
 
-
-    }
 
     public void Cancelar(View view) {
 
