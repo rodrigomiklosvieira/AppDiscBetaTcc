@@ -72,50 +72,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Deseja Alterar?"
+                    android:text="Digite o código de acesso"
                     android:textColor="@color/colorFonte"
                     android:textSize="20dp" />
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="abreSelecao"
-                    android:text="SIM"
-                    android:textColor="@color/colorFonte" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearSelect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <Spinner
-                    android:id="@+id/selecionaEmpresa"
+                <EditText
+                    android:id="@+id/txtCodigoAcesso"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:background="@drawable/spinner"
-                    android:spinnerMode="dropdown" />
+                    android:background="@drawable/borda"
+                    android:padding="10dp"
+                    android:textColor="@color/colorFonte"
+                    android:layout_marginTop="5dp"
+                    />
 
-                <Button
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="alterar"
-                    android:text="Alterar"
-                    android:textColor="@color/colorFonte" />
 
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/TemaSemBarra"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="475dp"
+        android:orientation="vertical"
+        android:background="#2A2E38"
+        android:layout_gravity="center"
+        >
+
+
+        <TextView
+            android:id="@+id/txtclose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:textColor="#ffff"
+            android:text="X"
+            android:textStyle="bold"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:background="@drawable/ic_radio_button"
+
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueceu a senha?"
+            android:textColor="#ffff"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:background="#3F51B5"
+            android:layout_marginBottom="100dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digite o E-mail cadastrado:"
+            android:textColor="@color/colorFonte"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+
+            />
+
+        <EditText
+            android:id="@+id/txtEmailSenha"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/borda"
+            android:textColorHint="@color/colorFonte"
+            android:textColor="@color/colorFonte"
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+
+
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="90dp"
+            android:background="#ffff"
+            android:padding="10dp"
+            android:text="Enviar"
+            android:textAlignment="center"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+</LinearLayout>
