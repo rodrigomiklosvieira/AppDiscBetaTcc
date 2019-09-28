@@ -67,29 +67,47 @@
                 android:textColor="@color/colorFonte"
                 android:textSize="20dp" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deseja alterar RH/Psicologo?"
+                android:textColor="@color/colorFonte"
+                android:textSize="20dp"
+               android:layout_gravity="center"
+
+                />
+
             <LinearLayout
                 android:id="@+id/sim"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Digite o código de acesso"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
+
 
                 <EditText
                     android:id="@+id/txtCodigoAcesso"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
                     android:background="@drawable/borda"
                     android:padding="10dp"
                     android:textColor="@color/colorFonte"
                     android:layout_marginTop="5dp"
                     />
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/buttonmenor"
+                    android:onClick="alterar"
+                    android:padding="10dp"
+                    android:text="Alterar"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
 
 
             </LinearLayout>

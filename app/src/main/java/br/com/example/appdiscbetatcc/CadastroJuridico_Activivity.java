@@ -37,6 +37,7 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
     EditText txtSenhaJ;
     EditText txtSenhaJConfirme;
     EditText txtTel;
+    EditText txtCodigoJAcesso;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,8 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
         txtSenhaJ = findViewById(R.id.txtSenhaJ);
         txtSenhaJConfirme = findViewById(R.id.txtSenhaJConfirme);
         txtTel = findViewById(R.id.txtTel);
+
+        txtCodigoJAcesso = findViewById(R.id.txtCodigoJAcesso);
 
         txtTel.addTextChangedListener(mascara.insert("(##)#####-####", txtTel));
 
@@ -117,6 +120,12 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validado = false;
         }
 
+        if (txtCodigoJAcesso.getText().length() == 0) {
+            txtCodigoJAcesso.setError("Campo código de acesso obrigatório!");
+            txtCodigoJAcesso.requestFocus();
+            validado = false;
+        }
+
         if(txtTel.getText().length()<13){
 
             txtTel.setError("Preencha o campo com DD + telefone");
@@ -165,11 +174,12 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                             boolean isErro = jsonObject.getBoolean("erro");
 
                             if (isErro) {
-
+                                Enviar.setEnabled(true);
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
 
                                 Intent intent = new Intent(CadastroJuridico_Activivity.this, PainelRHActivity.class);
+                                intent.putExtra("empresalogin", txtRazaoSocial.getText().toString());
                                 startActivity(intent);
                                 finish();
 
@@ -198,6 +208,7 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                 params.put("email", txtEmailJurid.getText().toString());
                 params.put("senha", txtSenhaJ.getText().toString());
                 params.put("telefone", txtTel.getText().toString());
+                params.put("codigo_acesso", txtCodigoJAcesso.getText().toString());
 
 
                 return params;

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -53,6 +54,7 @@ public class Descricao_Activity extends AppCompatActivity {
     int id2;
     String nomeempresa;
     TextView nomeempresaa;
+    EditText txtCodigoAcesso;
 
     String email;
 
@@ -66,7 +68,7 @@ public class Descricao_Activity extends AppCompatActivity {
 
         TextView nome = (TextView)findViewById(R.id.nome);
         nomeempresaa = (TextView)findViewById(R.id.recebeEmpresa);
-
+        txtCodigoAcesso = findViewById(R.id.txtCodigoAcesso);
 
         Intent intent = getIntent();
         String usuario = intent.getStringExtra("nome");
@@ -80,13 +82,12 @@ public class Descricao_Activity extends AppCompatActivity {
 
         Iniciar = (Button)findViewById(R.id.btnIniciar);
         Cancelar = (Button)findViewById(R.id.btnCancelar);
-        seleciona = findViewById(R.id.linearSelect);
-        sim = findViewById(R.id.sim);
-        seleciona.setVisibility(View.GONE);
 
-        chbEmpresa = (Spinner) findViewById(R.id.selecionaEmpresa);
+      //  sim = findViewById(R.id.sim);
+      //  seleciona.setVisibility(View.GONE);
 
-        selecionaEmpresa();
+
+
 
     }
 
@@ -100,13 +101,13 @@ public class Descricao_Activity extends AppCompatActivity {
         finish();
     }
 
-    public void abreSelecao(View view) {
+   // public void abreSelecao(View view) {
 
-        sim.setVisibility(View.GONE);
-        seleciona.setVisibility(View.VISIBLE);
+     //   sim.setVisibility(View.GONE);
+     //   seleciona.setVisibility(View.VISIBLE);
 
 
-    }
+  //  }
 
 
 
@@ -130,7 +131,7 @@ public class Descricao_Activity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),"Alteração Efetuada!", Toast.LENGTH_LONG).show();
 
 
-                                nomeempresaa.setText("O TESTE será enviado para: "+ nomeempresa + ".");
+                                nomeempresaa.setText("O TESTE será enviado para: "+ jsonObject.getString("nomeempresa") + ".");
                             }
 
                         } catch (Exception e) {
@@ -150,7 +151,7 @@ public class Descricao_Activity extends AppCompatActivity {
 
                 Map<String, String> params = new HashMap<>();
 
-                params.put("idempresa", Integer.toString(id2));
+                params.put("codigo_acesso", txtCodigoAcesso.getText().toString());
                 params.put("email", email);
 
 
@@ -165,6 +166,8 @@ public class Descricao_Activity extends AppCompatActivity {
 
 
     }
+
+
 
 
     private void verificaTeste() {
@@ -226,94 +229,15 @@ public class Descricao_Activity extends AppCompatActivity {
     }
 
 
-    private void selecionaEmpresa() {
 
-        stringRequest = new StringRequest(Request.Method.GET, urlwebservices2,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("strrrrr", ">>" + response);
-
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-
-
-                            if (jsonObject.optString("status").equals("true")) {
-
-                                goodModelArrayList = new ArrayList<>();
-                                JSONArray dataArray = jsonObject.getJSONArray("data");
-
-                                for (int i = 0; i < dataArray.length(); i++) {
-
-                                    spinner playerModel = new spinner();
-                                    JSONObject dataobj = dataArray.getJSONObject(i);
-
-                                    playerModel.setNome(dataobj.getString("nome"));
-                                    playerModel.setId(dataobj.getInt("id"));
-
-
-                                    goodModelArrayList.add(playerModel);
-
-                                }
-
-                                for (int i = 0; i < goodModelArrayList.size(); i++) {
-
-
-                                    names.add(goodModelArrayList.get(i).getNome());
-                                    ida.add(goodModelArrayList.get(i).getId());
-
-                                }
-
-                                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(Descricao_Activity.this, simple_spinner_item, names);
-                                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
-                                chbEmpresa.setAdapter(spinnerArrayAdapter);
-
-
-                                chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                                        nomeempresa =names.get(position);
-                                        id2 = ida.get(position);
-                                        // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
-                                        //  Toast.makeText(CadastroFisico_Activity.this,"ID: " + id2, Toast.LENGTH_LONG).show();
-                                    }
-
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> parent) {
-
-                                    }
-                                });
-
-
-                            }
-
-
-                        } catch (JSONException e) {
-
-                            e.printStackTrace();
-                        }
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-        requestQueue.add(stringRequest);
-
-
-    }
 
 
     public void alterar(View view) {
 
-        alteraEmpresa();
+     alteraEmpresa();
 
-        sim.setVisibility(View.VISIBLE);
-        seleciona.setVisibility(View.GONE);
+     //   sim.setVisibility(View.VISIBLE);
+     //   seleciona.setVisibility(View.GONE);
       //  chbEmpresa.setSelected(false);
 
     }

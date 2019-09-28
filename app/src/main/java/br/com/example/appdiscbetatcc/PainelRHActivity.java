@@ -433,7 +433,7 @@ public class PainelRHActivity extends AppCompatActivity {
 
                         } catch (JSONException e) {
 
-                            e.printStackTrace();
+                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
                         }
 
                     }
@@ -441,7 +441,7 @@ public class PainelRHActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Nenhum candidato encontrado!", Toast.LENGTH_LONG).show();
 
                     }
                 }) {

@@ -38,7 +38,7 @@ import static android.R.layout.simple_spinner_item;
 public class CadastroFisico_Activity extends AppCompatActivity {
 
     String urlwebservices = "https://carlos.cf/apiRest/cadastrausuario.php";
-    String urlwebservices2 = "https://carlos.cf/apiRest/selecionaempresa.php";
+
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
@@ -51,13 +51,11 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     EditText txtSenha;
     EditText txtSenhaConfirme;
     EditText txtTel;
-    Spinner chbEmpresa;
-    private ArrayList<spinner> goodModelArrayList;
-    private ArrayList<String> names = new ArrayList<String>();
-    private ArrayList<Integer> ida = new ArrayList<Integer>();
-    private static ProgressDialog mProgressDialog;
+
+
     int id2;
     String nomeempresa;
+    EditText txtCodigoAcesso;
 
 
 
@@ -79,8 +77,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
         txtSenha = findViewById(R.id.txtSenha);
         txtSenhaConfirme = findViewById(R.id.txtSenhaConfirme);
         txtTel = findViewById(R.id.txtTel);
-        chbEmpresa = (Spinner) findViewById(R.id.chbEmpresa);
 
+        txtCodigoAcesso = findViewById(R.id.txtCodigoAcesso);
 
         txtTel.addTextChangedListener(mascara.insert("(##)#####-####", txtTel));
 
@@ -88,8 +86,6 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
 
 
-
-        selecionaEmpresa();
 
 
 
@@ -176,6 +172,14 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
         }
 
+        if(txtCodigoAcesso.getText().length() == 0){
+
+            txtCodigoAcesso.setError("Campo código de acesso obrigatório!");
+            txtCodigoAcesso.requestFocus();
+            validado = false;
+
+        }
+
 
         if (validado) {
 
@@ -214,6 +218,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                             if (isErro) {
 
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
+                                EnviarCF.setEnabled(true);
                             } else {
 
 
@@ -222,7 +227,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                String email = txtEmailFisico.getText().toString();
                                 Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
                                 intent.putExtra("nome", nome);
-                                intent.putExtra("nomeempresa", nomeempresa);
+                                intent.putExtra("nomeempresa", jsonObject.getString("nomeempresa"));
                                 intent.putExtra("login", email);
                                 startActivity(intent);
                                 finish();
@@ -252,10 +257,8 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                 params.put("cpf", txtCpfFisico.getText().toString());
                 params.put("senha", txtSenha.getText().toString());
                 params.put("telefone", txtTel.getText().toString());
-                //int id = ((spinner)chbEmpresa.getSelectedItem()).id;
-                params.put("empresa", Integer.toString(id2));
 
-                //params.put("empresa", "19");
+                params.put("codigo_acesso_rh", txtCodigoAcesso.getText().toString());
 
                 return params;
             }
@@ -270,88 +273,6 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     }
 
 
-    private void selecionaEmpresa() {
 
-        stringRequest = new StringRequest(Request.Method.GET, urlwebservices2,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Log.d("strrrrr", ">>" + response);
-
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-
-
-                            if (jsonObject.optString("status").equals("true")) {
-
-                                goodModelArrayList = new ArrayList<>();
-                                JSONArray dataArray = jsonObject.getJSONArray("data");
-
-                                for (int i = 0; i < dataArray.length(); i++) {
-
-                                    spinner playerModel = new spinner();
-                                    JSONObject dataobj = dataArray.getJSONObject(i);
-
-                                    playerModel.setNome(dataobj.getString("nome"));
-                                    playerModel.setId(dataobj.getInt("id"));
-
-
-                                    goodModelArrayList.add(playerModel);
-
-                                }
-
-                                for (int i = 0; i < goodModelArrayList.size(); i++) {
-
-
-                                    names.add(goodModelArrayList.get(i).getNome());
-                                    ida.add(goodModelArrayList.get(i).getId());
-
-                                }
-
-                                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(CadastroFisico_Activity.this, simple_spinner_item, names);
-                                spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item); // The drop down view
-                                chbEmpresa.setAdapter(spinnerArrayAdapter);
-
-
-                                chbEmpresa.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                                    @Override
-                                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-
-                                        ((TextView) parent.getChildAt(0)).setTextColor(Color.WHITE);
-                                        nomeempresa =names.get(position);
-                                        id2 = ida.get(position);
-                                        // Toast.makeText(getBaseContext(), nome, Toast.LENGTH_SHORT).show();
-                                        //  Toast.makeText(CadastroFisico_Activity.this,"ID: " + id2, Toast.LENGTH_LONG).show();
-                                    }
-
-                                    @Override
-                                    public void onNothingSelected(AdapterView<?> parent) {
-
-                                    }
-                                });
-
-                            }
-
-
-                        } catch (JSONException e) {
-
-                            Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
-
-                        }
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
-
-                    }
-                });
-
-        requestQueue.add(stringRequest);
-
-
-    }
 
 }
