@@ -8,8 +8,7 @@
     android:orientation="vertical"
     android:theme="@style/TemaSemBarra"
     tools:context=".Login_Activity"
-
-
+    android:layout_gravity="center_vertical"
     >
 
     <TextView
