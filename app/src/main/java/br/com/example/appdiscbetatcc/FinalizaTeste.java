@@ -23,13 +23,12 @@ import java.util.Map;
 
 public class FinalizaTeste extends AppCompatActivity {
 
-    int d,i,s,c;
-    String url = "https://carlos.cf/apiRest/cadastrateste.php";
+    int d, i, s, c;
+    String url = "https://disc.cf/apiRest/cadastrateste.php";
     StringRequest stringRequest;
     RequestQueue requestQueue;
     String email;
     Button enviateste;
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +36,6 @@ public class FinalizaTeste extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
         enviateste = (Button) findViewById(R.id.enviateste);
-
 
         Intent intent = getIntent();
         d = intent.getIntExtra("d", 0);
@@ -48,14 +46,13 @@ public class FinalizaTeste extends AppCompatActivity {
         email = intent.getStringExtra("login");
     }
 
-
     public void Cancelar(View view) {
 
         finish();
     }
 
     public void enviaTeste(View view) {
-   validaEnvio();
+        validaEnvio();
         enviateste.setEnabled(false);
 
     }
@@ -109,15 +106,9 @@ public class FinalizaTeste extends AppCompatActivity {
 
                 return params;
             }
-
-
         };
-
 
         requestQueue.add(stringRequest);
 
-
     }
-
-
 }

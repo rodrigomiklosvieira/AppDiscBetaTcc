@@ -37,8 +37,7 @@ import static android.R.layout.simple_spinner_item;
 
 public class CadastroFisico_Activity extends AppCompatActivity {
 
-    String urlwebservices = "https://carlos.cf/apiRest/cadastrausuario.php";
-
+    String urlwebservices = "https://disc.cf/apiRest/cadastrausuario.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
@@ -52,14 +51,9 @@ public class CadastroFisico_Activity extends AppCompatActivity {
     EditText txtSenhaConfirme;
     EditText txtTel;
 
-
     int id2;
     String nomeempresa;
     EditText txtCodigoAcesso;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,23 +78,13 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
         txtCpfFisico.addTextChangedListener(mascara.insert("###.###.###-##", txtCpfFisico));
 
-
-
-
-
-
-
     }
-
 
     public void CancelarCF(View view) {
         finish();
-
     }
 
     public void EnviarCF(View view) {
-
-
 
         boolean validado = true;
 
@@ -122,7 +106,7 @@ public class CadastroFisico_Activity extends AppCompatActivity {
             validado = false;
         }
 
-        if (validateEmailFormat(txtEmailFisico.getText().toString())==false) {
+        if (validateEmailFormat(txtEmailFisico.getText().toString()) == false) {
             txtEmailFisico.setError("Digite um email válido");
             txtEmailFisico.requestFocus();
             validado = false;
@@ -147,7 +131,6 @@ public class CadastroFisico_Activity extends AppCompatActivity {
             txtSenhaConfirme.setError("As senhas não se coincidem");
             txtSenhaConfirme.requestFocus();
             validado = false;
-
         }
 
         if (txtTel.getText().length() == 0) {
@@ -156,42 +139,30 @@ public class CadastroFisico_Activity extends AppCompatActivity {
             validado = false;
         }
 
-        if(txtTel.getText().length()<13){
-
+        if (txtTel.getText().length() < 13) {
             txtTel.setError("Preencha o campo com DD + telefone");
             txtTel.requestFocus();
             validado = false;
-
         }
 
-        if(txtCpfFisico.getText().length()<14){
-
+        if (txtCpfFisico.getText().length() < 14) {
             txtCpfFisico.setError("Preencha o campo com 11 numeros");
             txtCpfFisico.requestFocus();
             validado = false;
-
         }
 
-        if(txtCodigoAcesso.getText().length() == 0){
-
+        if (txtCodigoAcesso.getText().length() == 0) {
             txtCodigoAcesso.setError("Campo código de acesso obrigatório!");
             txtCodigoAcesso.requestFocus();
             validado = false;
-
         }
 
-
         if (validado) {
-
             Toast.makeText(getApplicationContext(), "Cadastrando...aguarde...", Toast.LENGTH_SHORT).show();
 
             validarCadastro();
 
         }
-
-
-
-
     }
 
     private boolean validateEmailFormat(final String email) {
@@ -221,17 +192,15 @@ public class CadastroFisico_Activity extends AppCompatActivity {
                                 EnviarCF.setEnabled(true);
                             } else {
 
+                                String nome = txtNomeFisico.getText().toString();
 
-                               String nome = txtNomeFisico.getText().toString();
-
-                               String email = txtEmailFisico.getText().toString();
+                                String email = txtEmailFisico.getText().toString();
                                 Intent intent = new Intent(CadastroFisico_Activity.this, Descricao_Activity.class);
                                 intent.putExtra("nome", nome);
                                 intent.putExtra("nomeempresa", jsonObject.getString("nomeempresa"));
                                 intent.putExtra("login", email);
                                 startActivity(intent);
                                 finish();
-
                             }
 
                         } catch (Exception e) {
@@ -262,17 +231,10 @@ public class CadastroFisico_Activity extends AppCompatActivity {
 
                 return params;
             }
-
-
         };
-
 
         requestQueue.add(stringRequest);
 
-
     }
-
-
-
 
 }

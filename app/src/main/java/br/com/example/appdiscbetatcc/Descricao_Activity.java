@@ -39,9 +39,9 @@ public class Descricao_Activity extends AppCompatActivity {
     LinearLayout seleciona;
     LinearLayout sim;
 
-    String urlwebservices = "https://carlos.cf/apiRest/alterarempresa.php";
-    String urlwebservices2 = "https://carlos.cf/apiRest/selecionaempresa.php";
-    String urlwebservices3 = "https://carlos.cf/apiRest/verificateste.php";
+    String urlwebservices = "https://disc.cf/apiRest/alterarempresa.php";
+    String urlwebservices2 = "https://disc.cf/apiRest/selecionaempresa.php";
+    String urlwebservices3 = "https://disc.cf/apiRest/verificateste.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
@@ -58,7 +58,6 @@ public class Descricao_Activity extends AppCompatActivity {
 
     String email;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,8 +65,8 @@ public class Descricao_Activity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        TextView nome = (TextView)findViewById(R.id.nome);
-        nomeempresaa = (TextView)findViewById(R.id.recebeEmpresa);
+        TextView nome = (TextView) findViewById(R.id.nome);
+        nomeempresaa = (TextView) findViewById(R.id.recebeEmpresa);
         txtCodigoAcesso = findViewById(R.id.txtCodigoAcesso);
 
         Intent intent = getIntent();
@@ -75,24 +74,19 @@ public class Descricao_Activity extends AppCompatActivity {
         String nomeemp = intent.getStringExtra("nomeempresa");
         email = intent.getStringExtra("login");
 
-
-
         nome.setText("Bem-Vindo(a), " + usuario + ".");
         nomeempresaa.setText("O TESTE será enviado para: " + nomeemp + ".");
 
-        Iniciar = (Button)findViewById(R.id.btnIniciar);
-        Cancelar = (Button)findViewById(R.id.btnCancelar);
+        Iniciar = (Button) findViewById(R.id.btnIniciar);
+        Cancelar = (Button) findViewById(R.id.btnCancelar);
 
-      //  sim = findViewById(R.id.sim);
-      //  seleciona.setVisibility(View.GONE);
-
-
-
+        //  sim = findViewById(R.id.sim);
+        //  seleciona.setVisibility(View.GONE);
 
     }
 
     public void Iniciar(View view) {
-       verificaTeste();
+        verificaTeste();
     }
 
     public void Cancelar(View view) {
@@ -101,15 +95,12 @@ public class Descricao_Activity extends AppCompatActivity {
         finish();
     }
 
-   // public void abreSelecao(View view) {
+    // public void abreSelecao(View view) {
 
-     //   sim.setVisibility(View.GONE);
-     //   seleciona.setVisibility(View.VISIBLE);
+    //   sim.setVisibility(View.GONE);
+    //   seleciona.setVisibility(View.VISIBLE);
 
-
-  //  }
-
-
+    //  }
 
     private void alteraEmpresa() {
 
@@ -128,10 +119,9 @@ public class Descricao_Activity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
 
-                                Toast.makeText(getApplicationContext(),"Alteração Efetuada!", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Alteração Efetuada!", Toast.LENGTH_LONG).show();
 
-
-                                nomeempresaa.setText("O TESTE será enviado para: "+ jsonObject.getString("nomeempresa") + ".");
+                                nomeempresaa.setText("O TESTE será enviado para: " + jsonObject.getString("nomeempresa") + ".");
                             }
 
                         } catch (Exception e) {
@@ -154,21 +144,13 @@ public class Descricao_Activity extends AppCompatActivity {
                 params.put("codigo_acesso", txtCodigoAcesso.getText().toString());
                 params.put("email", email);
 
-
                 return params;
             }
-
-
         };
-
 
         requestQueue.add(stringRequest);
 
-
     }
-
-
-
 
     private void verificaTeste() {
 
@@ -187,8 +169,6 @@ public class Descricao_Activity extends AppCompatActivity {
                                 Intent intent = new Intent(Descricao_Activity.this, TesteDsicActivity.class);
                                 intent.putExtra("login", email);
                                 startActivity(intent);
-
-
 
                             } else {
 
@@ -212,33 +192,23 @@ public class Descricao_Activity extends AppCompatActivity {
 
                 Map<String, String> params = new HashMap<>();
 
-
                 params.put("email", email);
-
 
                 return params;
             }
-
-
         };
-
 
         requestQueue.add(stringRequest);
 
-
     }
-
-
-
-
 
     public void alterar(View view) {
 
-     alteraEmpresa();
+        alteraEmpresa();
 
-     //   sim.setVisibility(View.VISIBLE);
-     //   seleciona.setVisibility(View.GONE);
-      //  chbEmpresa.setSelected(false);
+        //   sim.setVisibility(View.VISIBLE);
+        //   seleciona.setVisibility(View.GONE);
+        //  chbEmpresa.setSelected(false);
 
     }
 }

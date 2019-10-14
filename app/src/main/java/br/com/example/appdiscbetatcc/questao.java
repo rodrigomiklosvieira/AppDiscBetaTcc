@@ -8,18 +8,17 @@ public class questao {
 
     private String numpPergunta;
     private List<String> respostas = new ArrayList<>();
-    int quadradoMais ;
-    int zMais ;
-    int musicaMais ;
-    int trianguloMais ;
+    int quadradoMais;
+    int zMais;
+    int musicaMais;
+    int trianguloMais;
 
+    int quadradoMenos;
+    int zMenos;
+    int musicaMenos;
+    int trianguloMenos;
 
-    int quadradoMenos ;
-    int zMenos ;
-    int musicaMenos ;
-    int trianguloMenos ;
-
-    public questao(String numPergunta, int quadradoMais, int zMais, int musicaMais,int trianguloMais, int quadradoMenos, int zMenos, int musicaMenos,int trianguloMenos,  String... respostas){
+    public questao(String numPergunta, int quadradoMais, int zMais, int musicaMais, int trianguloMais, int quadradoMenos, int zMenos, int musicaMenos, int trianguloMenos, String... respostas) {
         this.numpPergunta = numPergunta;
         this.respostas.add(respostas[0]);
         this.respostas.add(respostas[1]);
@@ -36,19 +35,46 @@ public class questao {
         this.musicaMenos = musicaMenos;
         this.trianguloMenos = trianguloMenos;
 
-      //  this.respostaCerta = respostaCerta;
+        //  this.respostaCerta = respostaCerta;
     }
 
-    public String getPergunta(){ return this.numpPergunta; }
-    public List<String> getRespostas(){ return this.respostas; }
-    public int getQuadradoMais(){ return this.quadradoMais; }
-    public int getzMais(){ return this.zMais; }
-    public int getMusicaMais(){ return this.musicaMais; }
-    public int getTrianguloMais(){ return this.trianguloMais; }
+    public String getPergunta() {
+        return this.numpPergunta;
+    }
 
+    public List<String> getRespostas() {
+        return this.respostas;
+    }
 
-    public int getQuadradoMenos(){ return this.quadradoMenos; }
-    public int getzMenos(){ return this.zMenos; }
-    public int getMusicaMenos(){ return this.musicaMenos; }
-    public int getTrianguloMenos(){ return this.trianguloMenos; }
+    public int getQuadradoMais() {
+        return this.quadradoMais;
+    }
+
+    public int getzMais() {
+        return this.zMais;
+    }
+
+    public int getMusicaMais() {
+        return this.musicaMais;
+    }
+
+    public int getTrianguloMais() {
+        return this.trianguloMais;
+    }
+
+    public int getQuadradoMenos() {
+        return this.quadradoMenos;
+    }
+
+    public int getzMenos() {
+        return this.zMenos;
+    }
+
+    public int getMusicaMenos() {
+        return this.musicaMenos;
+    }
+
+    public int getTrianguloMenos() {
+        return this.trianguloMenos;
+    }
 }

@@ -3,7 +3,7 @@ package br.com.example.appdiscbetatcc;
 public class spinner {
 
     private String nome;
-            int id;
+    int id;
 
     public String getNome() {
         return nome;
@@ -22,8 +22,7 @@ public class spinner {
     }
 
     @Override
-    public String toString()
-    {
+    public String toString() {
         return nome;
     }
 }

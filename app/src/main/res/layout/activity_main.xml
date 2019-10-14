@@ -15,9 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_gravity="center_vertical">
-
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
 
 
             <TextView
@@ -105,21 +104,18 @@
             </LinearLayout>
 
 
-
             <Button
 
                 android:id="@+id/btnCadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:background="#ffff"
                 android:onClick="ShowPopup"
                 android:padding="10dp"
                 android:text="Cadastrar"
                 android:textColor="#000"
-                android:textSize="20dp"
-                android:background="#ffff"
-
-                />
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/btnLogin"
@@ -133,7 +129,17 @@
                 android:textColor="#000"
                 android:textSize="20dp" />
 
-
+            <Button
+                android:id="@+id/btnSair"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="#ffff"
+                android:onClick="Login"
+                android:padding="10dp"
+                android:text="Sair"
+                android:textColor="#000"
+                android:textSize="20dp" />
 
         </LinearLayout>
     </ScrollView>

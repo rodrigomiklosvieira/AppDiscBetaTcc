@@ -2,15 +2,14 @@ package br.com.example.appdiscbetatcc;
 
 public class candidato {
 
-    String nome,telefone,email;
+    String nome, telefone, email;
     int id;
 
-    public candidato(int id,String nome, String telefone, String email) {
+    public candidato(int id, String nome, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-
     }
 
     public candidato() {
@@ -47,6 +46,5 @@ public class candidato {
     public void setId(int id) {
         this.id = id;
     }
-
 
 }

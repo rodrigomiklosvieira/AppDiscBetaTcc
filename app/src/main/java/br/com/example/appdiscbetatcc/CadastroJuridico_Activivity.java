@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class CadastroJuridico_Activivity extends AppCompatActivity {
 
-    String urlwebservices = "https://carlos.cf/apiRest/cadastrarh.php";
+    String urlwebservices = "https://disc.cf/apiRest/cadastrarh.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
@@ -46,8 +46,8 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        Enviar = (Button)findViewById(R.id.btnEnviar);
-        Cancelar = (Button)findViewById(R.id.btnCancelarJurid);
+        Enviar = (Button) findViewById(R.id.btnEnviar);
+        Cancelar = (Button) findViewById(R.id.btnCancelarJurid);
 
         txtRazaoSocial = findViewById(R.id.txtRazaoSocial);
         txtCnpj = findViewById(R.id.txtCnpj);
@@ -61,7 +61,6 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
         txtTel.addTextChangedListener(mascara.insert("(##)#####-####", txtTel));
 
         txtCnpj.addTextChangedListener(mascara.insert("##.###.###/####-##", txtCnpj));
-
     }
 
     public void EnviarJur(View view) {
@@ -86,7 +85,7 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validado = false;
         }
 
-        if (validateEmailFormat(txtEmailJurid.getText().toString())==false) {
+        if (validateEmailFormat(txtEmailJurid.getText().toString()) == false) {
             txtEmailJurid.setError("Digite um email válido!");
             txtEmailJurid.requestFocus();
             validado = false;
@@ -111,7 +110,6 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             txtSenhaJConfirme.setError("As senhas não se coincidem");
             txtSenhaJConfirme.requestFocus();
             validado = false;
-
         }
 
         if (txtTel.getText().length() == 0) {
@@ -126,22 +124,17 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
             validado = false;
         }
 
-        if(txtTel.getText().length()<13){
-
+        if (txtTel.getText().length() < 13) {
             txtTel.setError("Preencha o campo com DD + telefone");
             txtTel.requestFocus();
             validado = false;
-
         }
 
-        if(txtCnpj.getText().length()<14){
-
+        if (txtCnpj.getText().length() < 14) {
             txtCnpj.setError("Preencha o campo com 11 numeros para cpf ou 14 numeros para cnpj");
             txtCnpj.requestFocus();
             validado = false;
-
         }
-
 
         if (validado) {
 
@@ -158,7 +151,6 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
         }
         return false;
     }
-
 
     private void validarCadastro() {
         Enviar.setEnabled(false);
@@ -177,16 +169,13 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                                 Enviar.setEnabled(true);
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
-
                                 Intent intent = new Intent(CadastroJuridico_Activivity.this, PainelRHActivity.class);
                                 intent.putExtra("empresalogin", txtRazaoSocial.getText().toString());
                                 startActivity(intent);
                                 finish();
-
                             }
 
                         } catch (Exception e) {
-
                             Toast.makeText(getApplicationContext(), "Erro, sem comunicação com o servidor, verifique a internet e tente novamente!", Toast.LENGTH_LONG).show();
                             Enviar.setEnabled(true);
                         }
@@ -201,7 +190,6 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                     }
                 }) {
             protected Map<String, String> getParams() {
-
                 Map<String, String> params = new HashMap<>();
                 params.put("nome", txtRazaoSocial.getText().toString());
                 params.put("cnpj", txtCnpj.getText().toString());
@@ -210,16 +198,11 @@ public class CadastroJuridico_Activivity extends AppCompatActivity {
                 params.put("telefone", txtTel.getText().toString());
                 params.put("codigo_acesso", txtCodigoJAcesso.getText().toString());
 
-
                 return params;
             }
-
-
         };
 
-
         requestQueue.add(stringRequest);
-
 
     }
 

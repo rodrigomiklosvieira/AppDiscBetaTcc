@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class ListarDadosCandidatos extends AppCompatActivity {
 
-   String id_candidato,id_empresa;
+    String id_candidato, id_empresa;
     RequestQueue requestQueue;
     StringRequest stringRequest;
 
@@ -36,8 +36,8 @@ public class ListarDadosCandidatos extends AppCompatActivity {
     Button gerarGrafico;
     TextView id_Segmaior;
     LinearLayout idCorSegMaior;
-   TextView id_cand;
-    String urlwebservices = "https://carlos.cf/apiRest/verteste.php";
+    TextView id_cand;
+    String urlwebservices = "https://disc.cf/apiRest/verteste.php";
     private WebView webView;
 
     @Override
@@ -46,13 +46,13 @@ public class ListarDadosCandidatos extends AppCompatActivity {
         setContentView(R.layout.activity_listar_dados_candidatos);
         requestQueue = Volley.newRequestQueue(this);
 
-        id_cand = (TextView)findViewById(R.id.id_candidato);
+        id_cand = (TextView) findViewById(R.id.id_candidato);
 
-        id_maior = (TextView)findViewById(R.id.id_maior);
-        idCorMaior = (LinearLayout)findViewById(R.id.id_corMaior);
+        id_maior = (TextView) findViewById(R.id.id_maior);
+        idCorMaior = (LinearLayout) findViewById(R.id.id_corMaior);
 
-        id_Segmaior = (TextView)findViewById(R.id.id_Segmaior);
-        idCorSegMaior = (LinearLayout)findViewById(R.id.id_corSegMaior);
+        id_Segmaior = (TextView) findViewById(R.id.id_Segmaior);
+        idCorSegMaior = (LinearLayout) findViewById(R.id.id_corSegMaior);
         Intent intent = getIntent();
 
         id_candidato = intent.getStringExtra("id_candidato");
@@ -60,22 +60,10 @@ public class ListarDadosCandidatos extends AppCompatActivity {
 
         webView = (WebView) findViewById(R.id.webview);
 
-
-
-
-
-
-
-
         verCandidato();
     }
 
-
-
-
     private void verCandidato() {
-
-
 
         stringRequest = new StringRequest(Request.Method.POST, urlwebservices,
                 new Response.Listener<String>() {
@@ -92,27 +80,23 @@ public class ListarDadosCandidatos extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), jsonObject.getString("mensagem"), Toast.LENGTH_LONG).show();
                             } else {
 
-
-                                id_cand.setText("Candidato: "+jsonObject.getString("nome_candidato"));
+                                id_cand.setText("Candidato: " + jsonObject.getString("nome_candidato"));
 
                                 id_maior.setText(jsonObject.getString("mensagemMaior"));
-                                idCorMaior.setBackgroundColor(Color.parseColor("#"+jsonObject.getString("corMaior")));
+                                idCorMaior.setBackgroundColor(Color.parseColor("#" + jsonObject.getString("corMaior")));
 
                                 id_Segmaior.setText(jsonObject.getString("mensagemSegMaior"));
-                                idCorSegMaior.setBackgroundColor(Color.parseColor("#"+jsonObject.getString("corSegMaior")));
+                                idCorSegMaior.setBackgroundColor(Color.parseColor("#" + jsonObject.getString("corSegMaior")));
 
-                                String d,i,s,c;
+                                String d, i, s, c;
 
                                 d = jsonObject.getString("d");
                                 i = jsonObject.getString("i");
                                 s = jsonObject.getString("s");
                                 c = jsonObject.getString("c");
 
-
-
-
                                 webView.getSettings().setJavaScriptEnabled(true);
-                                webView.loadUrl("https://carlos.cf/apiRest/grafico.php?d="+d+"&i="+i+"&s="+s+"&c="+c+"");
+                                webView.loadUrl("https://carlos.cf/apiRest/grafico.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + "");
 
                             }
 
@@ -137,19 +121,11 @@ public class ListarDadosCandidatos extends AppCompatActivity {
                 params.put("id_candidato", id_candidato);
                 params.put("id_empresa", id_empresa);
 
-
                 return params;
             }
-
-
         };
-
 
         requestQueue.add(stringRequest);
 
-
     }
-
-
-
 }

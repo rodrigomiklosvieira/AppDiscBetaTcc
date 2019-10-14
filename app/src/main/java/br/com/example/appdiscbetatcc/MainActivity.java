@@ -19,34 +19,24 @@ public class MainActivity extends AppCompatActivity {
     Button Login;
     Dialog dialog;
 
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sairSistema = (Button)findViewById(R.id.btnSair);
-        Cadastrar = (Button)findViewById(R.id.btnCadastrar);
-        Login = (Button)findViewById(R.id.btnLogin);
+        sairSistema = (Button) findViewById(R.id.btnSair);
+        Cadastrar = (Button) findViewById(R.id.btnCadastrar);
+        Login = (Button) findViewById(R.id.btnLogin);
         dialog = new Dialog(this);
-
     }
 
-    public void test(){
+    public void test() {
         Button PJuridica;
         Button PFisica;
         TextView txtclose;
         dialog.setContentView(R.layout.showpopup_layout);
 
-        txtclose =(TextView) dialog.findViewById(R.id.txtclose);
-
+        txtclose = (TextView) dialog.findViewById(R.id.txtclose);
 
         PJuridica = (Button) dialog.findViewById(R.id.btnJuridico);
         PFisica = (Button) dialog.findViewById(R.id.btnFisica);
@@ -59,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-       PJuridica.setOnClickListener(new View.OnClickListener() {
+        PJuridica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v3) {
 
@@ -79,16 +69,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
     }
 
     public void ShowPopup(View view) {
-      test();
-
-
+        test();
     }
 
     public void Login(View view) {
@@ -99,20 +85,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void Sair(View view) {
 
-
-
     }
 
     public void dinamica(View view) {
         Intent intent = new Intent(MainActivity.this, dominancia_Activity.class);
         startActivity(intent);
-
     }
 
     public void influencia(View view) {
         Intent intent = new Intent(MainActivity.this, influencia_Activity.class);
         startActivity(intent);
-
     }
 
     public void estabilidade(View view) {
@@ -124,50 +106,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, cautela_Activity.class);
         startActivity(intent);
     }
-
-    public void temas(View view) {
-        Button preto;
-
-        TextView txtclose;
-        dialog.setContentView(R.layout.popup_estilo);
-
-        txtclose =(TextView) dialog.findViewById(R.id.txtclose);
-
-
-        preto = (Button) dialog.findViewById(R.id.estiloPreto);
-
-
-        txtclose.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v2) {
-
-                dialog.dismiss();
-            }
-        });
-
-        preto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v3) {
-
-              
-
-            }
-        });
-
-
-
-
-
-
-
-
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        dialog.show();
-
-    }
-
-
-
-
-
 }
