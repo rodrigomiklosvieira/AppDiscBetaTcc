@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
         Cadastrar = (Button) findViewById(R.id.btnCadastrar);
         Login = (Button) findViewById(R.id.btnLogin);
         dialog = new Dialog(this);
+
+        sairSistema.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     public void test() {
@@ -37,14 +44,12 @@ public class MainActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.showpopup_layout);
 
         txtclose = (TextView) dialog.findViewById(R.id.txtclose);
-
         PJuridica = (Button) dialog.findViewById(R.id.btnJuridico);
         PFisica = (Button) dialog.findViewById(R.id.btnFisica);
 
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v2) {
-
                 dialog.dismiss();
             }
         });
@@ -52,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         PJuridica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v3) {
-
                 Intent intent = new Intent(MainActivity.this, CadastroJuridico_Activivity.class);
                 startActivity(intent);
                 dialog.dismiss();
@@ -62,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
         PFisica.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(MainActivity.this, CadastroFisico_Activity.class);
                 startActivity(intent);
                 dialog.dismiss();
@@ -81,10 +84,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Login_Activity.class);
         startActivity(intent);
         finish();
-    }
-
-    public void Sair(View view) {
-
     }
 
     public void dinamica(View view) {
