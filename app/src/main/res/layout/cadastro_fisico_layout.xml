@@ -43,10 +43,10 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/borda"
-                    android:padding="5dp"
                     android:hint="Nome Completo:"
-                    android:textColorHint="@color/colorFonte"
-                    android:textColor="@color/colorFonte" />
+                    android:padding="5dp"
+                    android:textColor="@color/colorFonte"
+                    android:textColorHint="@color/colorFonte" />
 
                 <EditText
                     android:id="@+id/txtCpfFisico"
@@ -57,11 +57,11 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/borda"
+                    android:hint="CPF:"
                     android:inputType="number"
                     android:padding="5dp"
-                    android:hint="CPF:"
-                    android:textColorHint="@color/colorFonte"
-                    android:textColor="@color/colorFonte" />
+                    android:textColor="@color/colorFonte"
+                    android:textColorHint="@color/colorFonte" />
 
                 <EditText
                     android:id="@+id/txtEmailFisico"
@@ -72,9 +72,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/borda"
+                    android:hint="E-mail:"
                     android:inputType="textEmailAddress"
                     android:padding="5dp"
-                    android:hint="E-mail:"
                     android:textColor="@color/colorFonte"
                     android:textColorHint="@color/colorFonte" />
 
@@ -87,11 +87,11 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/borda"
+                    android:hint="Telefone:"
                     android:inputType="number"
                     android:padding="5dp"
-                    android:hint="Telefone:"
-                    android:textColorHint="@color/colorFonte"
-                    android:textColor="@color/colorFonte" />
+                    android:textColor="@color/colorFonte"
+                    android:textColorHint="@color/colorFonte" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,15 +139,6 @@
                     android:padding="10dp"
                     android:textColor="@color/colorFonte" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:text="Código de acesso:"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
-
                 <EditText
                     android:id="@+id/txtCodigoAcesso"
                     android:layout_width="match_parent"
@@ -156,9 +147,10 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="5dp"
                     android:background="@drawable/borda"
-                    android:inputType="textPassword"
+                    android:hint="Código de Acesso:"
                     android:padding="10dp"
-                    android:textColor="@color/colorFonte" />
+                    android:textColor="@color/colorFonte"
+                    android:textColorHint="@color/colorFonte" />
 
             </LinearLayout>
 
