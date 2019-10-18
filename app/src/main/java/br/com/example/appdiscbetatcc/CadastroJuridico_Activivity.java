@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class CadastroJuridico_Activivity extends AppCompatActivity {
 
-    String urlwebservices = "https://disc.cf/apiRest/cadastrarh.php";
+    String urlwebservices = "https://www.avaliacaodisc.com/apiRest/cadastrarh.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;

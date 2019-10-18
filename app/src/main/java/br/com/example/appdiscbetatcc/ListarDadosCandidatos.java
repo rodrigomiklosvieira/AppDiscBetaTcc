@@ -37,7 +37,7 @@ public class ListarDadosCandidatos extends AppCompatActivity {
     TextView id_Segmaior;
     LinearLayout idCorSegMaior;
     TextView id_cand;
-    String urlwebservices = "https://disc.cf/apiRest/verteste.php";
+    String urlwebservices = "https://www.avaliacaodisc.com/apiRest/verteste.php";
     private WebView webView;
 
     @Override
@@ -96,7 +96,7 @@ public class ListarDadosCandidatos extends AppCompatActivity {
                                 c = jsonObject.getString("c");
 
                                 webView.getSettings().setJavaScriptEnabled(true);
-                                webView.loadUrl("https://carlos.cf/apiRest/grafico.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + "");
+                                webView.loadUrl("https://www.avaliacaodisc.com/apiRest/grafico.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + "");
 
                             }
 

@@ -39,9 +39,9 @@ public class Descricao_Activity extends AppCompatActivity {
     LinearLayout seleciona;
     LinearLayout sim;
 
-    String urlwebservices = "https://disc.cf/apiRest/alterarempresa.php";
-    String urlwebservices2 = "https://disc.cf/apiRest/selecionaempresa.php";
-    String urlwebservices3 = "https://disc.cf/apiRest/verificateste.php";
+    String urlwebservices = "https://www.avaliacaodisc.com/apiRest/alterarempresa.php";
+    String urlwebservices2 = "https://www.avaliacaodisc.com/apiRest/selecionaempresa.php";
+    String urlwebservices3 = "https://www.avaliacaodisc.com/apiRest/verificateste.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;

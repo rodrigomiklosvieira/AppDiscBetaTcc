@@ -27,8 +27,8 @@ import java.util.Map;
 
 public class Login_Activity extends AppCompatActivity {
 
-    String urlwebServices = "https://disc.cf/apiRest/validalogin.php";
-    String urlwebservices2 = "https://disc.cf/apiRest/esqueceusenha.php";
+    String urlwebServices = "https://www.avaliacaodisc.com/apiRest/validalogin.php";
+    String urlwebservices2 = "https://www.avaliacaodisc.com/apiRest/esqueceusenha.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;

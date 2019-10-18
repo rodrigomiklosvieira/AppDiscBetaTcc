@@ -62,8 +62,8 @@ public class PainelRHActivity extends AppCompatActivity {
     List<candidato> candidatoList;
 
     Dialog dialog;
-    String urlwebservices = "https://disc.cf/apiRest/buscacandidato.php";
-    String urlwebservices2 = "https://disc.cf/apiRest/verteste.php";
+    String urlwebservices = "https://www.avaliacaodisc.com/apiRest/buscacandidato.php";
+    String urlwebservices2 = "https://www.avaliacaodisc.com/apiRest/verteste.php";
     EditText editEnviar;
     Button atualizaLista;
 
@@ -460,7 +460,7 @@ public class PainelRHActivity extends AppCompatActivity {
                                 String masktel = (mascara.addMask(telefone, "(##)#####-####"));
 
                                 if (flag == 1) {
-                                    String url = "https://carlos.cf/apiRest/imprimeteste.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + " " +
+                                    String url = "https://www.avaliacaodisc.com/apiRest/imprimeteste.php?d=" + d + "&i=" + i + "&s=" + s + "&c=" + c + " " +
                                             "&nome=" + nome + "&telefone=" + masktel + "&email=" + email + "&maior=" + maior + "&maiorcor=" + maiorCor + "&segmaior="
                                             + segMaior + "&segmaiorcor=" + segMaiorCor + "";
                                     Intent intent = new Intent(Intent.ACTION_VIEW);

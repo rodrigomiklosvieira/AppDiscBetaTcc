@@ -24,7 +24,7 @@ import java.util.Map;
 public class FinalizaTeste extends AppCompatActivity {
 
     int d, i, s, c;
-    String url = "https://disc.cf/apiRest/cadastrateste.php";
+    String url = "https://www.avaliacaodisc.com/apiRest/cadastrateste.php";
     StringRequest stringRequest;
     RequestQueue requestQueue;
     String email;

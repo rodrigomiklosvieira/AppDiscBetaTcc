@@ -37,7 +37,7 @@ import static android.R.layout.simple_spinner_item;
 
 public class CadastroFisico_Activity extends AppCompatActivity {
 
-    String urlwebservices = "https://disc.cf/apiRest/cadastrausuario.php";
+    String urlwebservices = "https://www.avaliacaodisc.com/apiRest/cadastrausuario.php";
 
     StringRequest stringRequest;
     RequestQueue requestQueue;
