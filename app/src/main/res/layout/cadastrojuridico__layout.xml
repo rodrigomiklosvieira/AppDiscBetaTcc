@@ -148,7 +148,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginRight="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/borda"
@@ -157,47 +157,41 @@
                     android:textColor="@color/colorFonte"
                     android:textColorHint="@color/colorFonte" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="40dp">
+
+                    <Button
+                        android:id="@+id/btnCancelarJurid"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#F44336"
+                        android:onClick="CancelarJur"
+                        android:text="Cancelar"
+                        android:textColor="#ffff"
+                        android:textSize="20dp" />
+
+                    <Button
+                        android:id="@+id/btnEnviar"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:background="#4CAF50"
+                        android:onClick="EnviarJur"
+                        android:padding="10dp"
+                        android:text="Cadastrar"
+                        android:textColor="#ffff"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </ScrollView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btnCancelarJurid"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:background="#F44336"
-                android:onClick="CancelarJur"
-                android:text="Cancelar"
-                android:textColor="#ffff"
-                android:textSize="20dp" />
-
-            <Button
-                android:id="@+id/btnEnviar"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_weight="1"
-                android:background="#4CAF50"
-                android:onClick="EnviarJur"
-                android:padding="10dp"
-                android:text="Cadastrar"
-                android:textColor="#ffff"
-                android:textSize="20dp" />
-
-        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>
