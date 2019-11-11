@@ -9,136 +9,137 @@
     android:theme="@style/TemaSemBarra"
     tools:context=".Descricao_Activity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp"
-            android:layout_gravity="center_vertical">
-
-            <Button
-
-                android:id="@+id/btnCancelar"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_gravity="right"
-                android:background="@drawable/sair"
-                android:onClick="Cancelar"
-                android:shadowColor="#383838"
-                android:shadowDx="0"
-                android:shadowDy="0"
-                android:shadowRadius="25"
-                android:text="X"
-                android:textColor="#FFFFFF"
-                android:textSize="35sp" />
-
-            <TextView
-                android:id="@+id/nome"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="40dp"
-                android:text="Descrição do Teste"
-                android:textAlignment="center"
-                android:textColor="@color/colorFonte"
-                android:textSize="40dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="clip_vertical"
-                android:layout_margin="30dp"
-                android:text="@string/descricao"
-                android:textAlignment="center"
-                android:textColor="@color/colorFonte"
-                android:textSize="20dp" />
-
-            <TextView
-                android:id="@+id/recebeEmpresa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="clip_vertical"
-                android:layout_margin="20dp"
-                android:text="Erro"
-                android:textAlignment="center"
-                android:textColor="@color/colorFonte"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Deseja alterar RH/Psicologo?"
-                android:textColor="@color/colorFonte"
-                android:textSize="20dp"
-               android:layout_gravity="center"
-
-                />
+            android:layout_height="wrap_content">
 
             <LinearLayout
-                android:id="@+id/sim"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
+                <Button
+                    android:id="@+id/btnCancelar"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/sair"
+                    android:onClick="Cancelar"
+                    android:shadowColor="#383838"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="25"
+                    android:text="X"
+                    android:textColor="#FFFFFF"
+                    android:textSize="35sp" />
 
-
-                <EditText
-                    android:id="@+id/txtCodigoAcesso"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:background="@drawable/borda"
-                    android:padding="10dp"
+                <TextView
+                    android:id="@+id/nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Descrição do Teste"
+                    android:textAlignment="center"
                     android:textColor="@color/colorFonte"
-                    android:layout_marginTop="5dp"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical"
+                    android:layout_margin="30dp"
+                    android:text="@string/descricao"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/recebeEmpresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="clip_vertical"
+                    android:layout_margin="10dp"
+                    android:text="Erro"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Deseja alterar RH/Psicologo?"
+                    android:textColor="@color/colorFonte"
+                    android:textSize="20dp"
+
                     />
 
-                <Button
+                <LinearLayout
+                    android:id="@+id/sim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
 
+
+                    <EditText
+                        android:id="@+id/txtCodigoAcesso"
+                        android:layout_width="150dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/borda"
+                        android:padding="10dp"
+                        android:textColor="@color/colorFonte" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/buttonmenor"
+                        android:onClick="alterar"
+                        android:padding="10dp"
+                        android:text="Alterar"
+                        android:textColor="@color/colorFonte"
+                        android:textSize="20dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="alterar"
-                    android:padding="10dp"
-                    android:text="Alterar"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
+                    <Button
+                        android:id="@+id/btnIniciar"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/buttonmenor"
+                        android:onClick="Iniciar"
+                        android:padding="10dp"
+                        android:text="Iniciar teste"
+                        android:textColor="@color/colorFonte"
+                        android:textSize="20dp" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
+        </ScrollView>
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="60dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/btnIniciar"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:layout_margin="10dp"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/buttonmenor"
-                    android:onClick="Iniciar"
-                    android:padding="10dp"
-                    android:text="Iniciar teste"
-                    android:textColor="@color/colorFonte"
-                    android:textSize="20dp" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>
