@@ -80,7 +80,7 @@ public class PainelRHActivity extends AppCompatActivity {
         LstPainel = (ListView) findViewById(R.id.LstPainel);
         atualizaLista = (Button) findViewById(R.id.atualizaLista);
         candidatoList = new ArrayList<>();
-        eText = (EditText) findViewById(R.id.eText);
+
         dialog = new Dialog(this);
 
         spinner = (Spinner) findViewById(R.id.selecionadados);
